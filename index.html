@@ -6,794 +6,297 @@
 <title>Croatia Holiday — June 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --azure: #1a6b8a;
-    --deep-sea: #0d3d52;
-    --sea-foam: #5bb8d4;
-    --sand: #f2ead8;
-    --warm-sand: #e8d9b8;
-    --terracotta: #c4602a;
-    --gold: #c9952a;
-    --dusk: #8b4e6b;
-    --text-dark: #1a1a1a;
-    --text-mid: #4a4a4a;
-    --text-light: #888;
-    --white: #ffffff;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background: var(--sand);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    position: relative;
-    height: 100vh;
-    min-height: 600px;
-    background: linear-gradient(160deg, var(--deep-sea) 0%, var(--azure) 50%, #2a9dc4 80%, #6fcae0 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 40% at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(10,40,60,0.4) 0%, transparent 60%);
-  }
-
-  /* Wave SVG at bottom */
-  .hero-wave {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-  }
-
-  /* Floating circles decoration */
-  .hero-circles {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-  .hero-circles span {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.12);
-  }
-  .hero-circles span:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -60px; }
-  .hero-circles span:nth-child(2) { width: 500px; height: 500px; top: -200px; right: -200px; opacity: 0.5; }
-  .hero-circles span:nth-child(3) { width: 200px; height: 200px; bottom: 80px; left: 60px; }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 24px;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.65);
-    margin-bottom: 20px;
-  }
-
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 9vw, 110px);
-    font-weight: 300;
-    color: white;
-    line-height: 0.92;
-    margin-bottom: 24px;
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: #a8dff0;
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 48px;
-  }
-
-  .hero-dates {
-    display: inline-flex;
-    gap: 32px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 60px;
-    padding: 14px 36px;
-  }
-
-  .hero-dates span {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  .hero-dates .sep {
-    color: rgba(255,255,255,0.3);
-    font-weight: 300;
-  }
-
-  /* ── QUICK STATS BAR ── */
-  .stats-bar {
-    background: var(--deep-sea);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0;
-    padding: 0;
-  }
-
-  .stat {
-    padding: 20px 40px;
-    text-align: center;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    min-width: 140px;
-  }
-
-  .stat:last-child { border-right: none; }
-
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--sea-foam);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-  }
-
-  /* ── LAYOUT ── */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  .section-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--terracotta);
-    margin-bottom: 12px;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 300;
-    color: var(--deep-sea);
-    line-height: 1.1;
-    margin-bottom: 48px;
-  }
-
-  /* ── ITINERARY TIMELINE ── */
-  .timeline {
-    position: relative;
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 120px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, var(--azure) 10%, var(--azure) 90%, transparent);
-    opacity: 0.25;
-  }
-
-  .day-block {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 0 40px;
-    margin-bottom: 0;
-    position: relative;
-  }
-
-  .day-meta {
-    text-align: right;
-    padding: 32px 0;
-    padding-top: 36px;
-    position: relative;
-  }
-
-  .day-meta::after {
-    content: '';
-    position: absolute;
-    right: -47px;
-    top: 44px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 3px solid var(--azure);
-    z-index: 2;
-  }
-
-  .day-date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--azure);
-    letter-spacing: 1px;
-  }
-
-  .day-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 300;
-    color: var(--text-light);
-    line-height: 1;
-  }
-
-  .day-card {
-    background: white;
-    border-radius: 16px;
-    padding: 28px 32px;
-    margin: 20px 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-    border-left: 4px solid var(--azure);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .day-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(26,107,138,0.12);
-  }
-
-  .day-card.transit { border-left-color: var(--gold); }
-  .day-card.day-trip { border-left-color: var(--dusk); }
-  .day-card.national-park { border-left-color: #4a9b6f; }
-
-  .card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    gap: 16px;
-  }
-
-  .card-location {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 400;
-    color: var(--deep-sea);
-    line-height: 1.1;
-  }
-
-  .card-badge {
-    flex-shrink: 0;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: #e8f4f9;
-    color: var(--azure);
-    margin-top: 4px;
-  }
-
-  .card-badge.transit { background: #fef6e4; color: #a07020; }
-  .card-badge.day-trip { background: #f3eaf5; color: var(--dusk); }
-  .card-badge.green { background: #eaf5ee; color: #2e7a4f; }
-
-  .card-desc {
-    font-size: 13.5px;
-    line-height: 1.7;
-    color: var(--text-mid);
-    margin-bottom: 20px;
-  }
-
-  /* Tag pills */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
-  .tag {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background: var(--sand);
-    color: var(--text-mid);
-    border: 1px solid var(--warm-sand);
-  }
-
-  /* Grid sections inside card */
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 16px;
-  }
-
-  .card-section {
-    background: var(--sand);
-    border-radius: 10px;
-    padding: 14px 16px;
-  }
-
-  .card-section-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--terracotta);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .card-section ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .card-section ul li {
-    font-size: 12.5px;
-    color: var(--text-mid);
-    padding-left: 14px;
-    position: relative;
-    line-height: 1.5;
-  }
-
-  .card-section ul li::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-    color: var(--azure);
-    font-weight: bold;
-  }
-
-  /* Hotel block */
-  .hotel-block {
-    background: linear-gradient(135deg, #f0f8fc, #e8f4f9);
-    border: 1px solid #c8e8f3;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-top: 16px;
-  }
-
-  .hotel-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--azure);
-    margin-bottom: 6px;
-  }
-
-  .hotel-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--deep-sea);
-    margin-bottom: 4px;
-  }
-
-  .hotel-desc {
-    font-size: 12px;
-    color: var(--text-mid);
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-
-  .hotel-alt {
-    font-size: 11px;
-    color: var(--text-light);
-    font-style: italic;
-  }
-
-  .hotel-alt strong {
-    font-style: normal;
-    font-weight: 600;
-    color: var(--text-mid);
-  }
-
-  /* Ferry info */
-  .ferry-block {
-    background: linear-gradient(135deg, #fef9ee, #fdf0d5);
-    border: 1px solid #f0d898;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-top: 16px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .ferry-icon {
-    font-size: 28px;
-    flex-shrink: 0;
-  }
-
-  .ferry-info { flex: 1; }
-
-  .ferry-route {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--deep-sea);
-    margin-bottom: 3px;
-  }
-
-  .ferry-detail {
-    font-size: 11.5px;
-    color: var(--text-mid);
-  }
-
-  /* ── TODO ── */
-  .todo-section {
-    background: var(--deep-sea);
-    color: white;
-    padding: 80px 0;
-  }
-
-  .todo-section .section-label { color: var(--sea-foam); }
-  .todo-section .section-title { color: white; margin-bottom: 12px; }
-
-  .todo-intro {
-    font-size: 14px;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 48px;
-    letter-spacing: 0.3px;
-  }
-
-  .todo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-  }
-
-  .todo-category {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 24px;
-  }
-
-  .todo-cat-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .todo-cat-icon {
-    font-size: 22px;
-  }
-
-  .todo-cat-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: white;
-  }
-
-  .todo-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-    cursor: pointer;
-  }
-
-  .todo-item:last-child { margin-bottom: 0; }
-
-  .todo-check {
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
-    border-radius: 5px;
-    border: 2px solid rgba(255,255,255,0.25);
-    margin-top: 1px;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .todo-item.checked .todo-check {
-    background: var(--sea-foam);
-    border-color: var(--sea-foam);
-  }
-
-  .todo-item.checked .todo-check::after {
-    content: '✓';
-    font-size: 12px;
-    color: var(--deep-sea);
-    font-weight: bold;
-  }
-
-  .todo-item.checked .todo-text {
-    text-decoration: line-through;
-    opacity: 0.4;
-  }
-
-  .todo-text {
-    font-size: 13px;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.5;
-    transition: opacity 0.2s;
-  }
-
-  .todo-text .priority {
-    display: inline-block;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 2px 7px;
-    border-radius: 10px;
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  .priority.urgent {
-    background: rgba(196,96,42,0.3);
-    color: #f0a070;
-  }
-
-  .priority.soon {
-    background: rgba(201,149,42,0.3);
-    color: #f0c870;
-  }
-
-  /* ── FERRY SUMMARY TABLE ── */
-  .ferry-section {
-    background: white;
-  }
-
-  .ferry-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
-  .ferry-table th {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 2px solid var(--warm-sand);
-  }
-
-  .ferry-table td {
-    padding: 14px 16px;
-    border-bottom: 1px solid var(--sand);
-    color: var(--text-mid);
-    vertical-align: top;
-  }
-
-  .ferry-table tr:last-child td { border-bottom: none; }
-
-  .ferry-table tr:hover td { background: #f8fbfd; }
-
-  .ferry-route-cell {
-    font-weight: 600;
-    color: var(--deep-sea);
-  }
-
-  .ferry-price {
-    font-weight: 600;
-    color: var(--terracotta);
-  }
-
-  /* ── BUDGET ── */
-  .budget-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-    margin-top: 32px;
-  }
-
-  .budget-item {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    border-top: 3px solid var(--azure);
-  }
-
-  .budget-item.total {
-    border-top-color: var(--terracotta);
-    background: linear-gradient(135deg, #fff8f4, #fff);
-  }
-
-  .budget-cat {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 8px;
-  }
-
-  .budget-amount {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    font-weight: 300;
-    color: var(--deep-sea);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .budget-item.total .budget-amount { color: var(--terracotta); }
-
-  .budget-note {
-    font-size: 11px;
-    color: var(--text-light);
-  }
-
-  /* ── TIPS ── */
-  .tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
-
-  .tip-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  }
-
-  .tip-icon {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .tip-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--deep-sea);
-    margin-bottom: 6px;
-    letter-spacing: 0.3px;
-  }
-
-  .tip-text {
-    font-size: 12.5px;
-    color: var(--text-mid);
-    line-height: 1.6;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--deep-sea);
-    text-align: center;
-    padding: 40px;
-  }
-
-  footer p {
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    letter-spacing: 1px;
-  }
-
-  footer strong {
-    color: var(--sea-foam);
-    font-weight: 600;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-content > * {
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-eyebrow { animation-delay: 0.1s; }
-  .hero-title { animation-delay: 0.25s; }
-  .hero-subtitle { animation-delay: 0.4s; }
-  .hero-dates { animation-delay: 0.55s; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 700px) {
-    .timeline::before { left: 70px; }
-    .day-block { grid-template-columns: 70px 1fr; gap: 0 20px; }
-    .day-meta::after { right: -30px; }
-    .card-grid { grid-template-columns: 1fr; }
-    .todo-grid { grid-template-columns: 1fr; }
-    .stat { padding: 16px 20px; min-width: 100px; }
-    .stats-bar { justify-content: flex-start; overflow-x: auto; }
-    section { padding: 56px 0; }
-    .hero { min-height: 500px; }
-  }
-
-  /* ── PRINT ── */
-  @media print {
-    .hero { height: auto; padding: 60px 0; min-height: unset; }
-    .day-card { break-inside: avoid; }
-    .todo-section { break-inside: avoid; }
-  }
-
-  /* Divider line */
-  .divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--warm-sand), transparent);
-    margin: 8px 0;
-  }
-
-  /* Inline link style */
-  a.ext-link {
-    color: var(--azure);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid rgba(26,107,138,0.3);
-    transition: border-color 0.2s;
-  }
-  a.ext-link:hover { border-color: var(--azure); }
+:root {
+  --azure: #1a6b8a;
+  --deep-sea: #0d3d52;
+  --sea-foam: #5bb8d4;
+  --sand: #f2ead8;
+  --warm-sand: #e8d9b8;
+  --terracotta: #c4602a;
+  --gold: #c9952a;
+  --dusk: #8b4e6b;
+  --green: #4a9b6f;
+  --text-dark: #1a1a1a;
+  --text-mid: #4a4a4a;
+  --text-light: #888;
+  --white: #ffffff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background:var(--sand); color:var(--text-dark); overflow-x:hidden; }
+
+/* HERO */
+.hero {
+  position:relative; height:100vh; min-height:600px;
+  background:linear-gradient(160deg,var(--deep-sea) 0%,var(--azure) 50%,#2a9dc4 80%,#6fcae0 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 40% at 70% 30%,rgba(255,255,255,.06) 0%,transparent 60%),
+             radial-gradient(ellipse 40% 60% at 20% 80%,rgba(10,40,60,.4) 0%,transparent 60%);
+}
+.hero-wave { position:absolute; bottom:-2px; left:0; width:100%; height:120px; }
+.hero-circles { position:absolute; inset:0; pointer-events:none; }
+.hero-circles span { position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.12); }
+.hero-circles span:nth-child(1){width:300px;height:300px;top:-80px;right:-60px;}
+.hero-circles span:nth-child(2){width:500px;height:500px;top:-200px;right:-200px;opacity:.5;}
+.hero-circles span:nth-child(3){width:200px;height:200px;bottom:80px;left:60px;}
+.hero-content { position:relative; z-index:2; text-align:center; padding:0 24px; }
+.hero-eyebrow { font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,.65); margin-bottom:20px; }
+.hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(52px,9vw,110px); font-weight:300; color:white; line-height:.92; margin-bottom:24px; }
+.hero-title em { font-style:italic; color:#a8dff0; }
+.hero-subtitle { font-size:13px; font-weight:400; letter-spacing:2px; color:rgba(255,255,255,.7); margin-bottom:48px; }
+.hero-dates {
+  display:inline-flex; gap:32px;
+  background:rgba(255,255,255,.1); backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.2); border-radius:60px; padding:14px 36px;
+}
+.hero-dates span { font-size:12px; font-weight:500; letter-spacing:1.5px; color:white; text-transform:uppercase; }
+.hero-dates .sep { color:rgba(255,255,255,.3); font-weight:300; }
+
+/* FLIGHTS BANNER */
+.flights-banner { background:#0a2e3d; border-bottom:1px solid rgba(255,255,255,.06); }
+.flights-inner { max-width:1100px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:1fr 1fr; }
+.flight-group { padding:18px 24px 18px 0; border-right:1px solid rgba(255,255,255,.08); }
+.flight-group:last-child { border-right:none; padding-left:24px; padding-right:0; }
+.flight-group-label { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--sea-foam); margin-bottom:8px; }
+.flight-row { display:flex; align-items:center; gap:10px; margin-bottom:5px; flex-wrap:wrap; }
+.flight-who { font-size:11px; font-weight:600; color:rgba(255,255,255,.5); min-width:130px; }
+.flight-detail { font-size:12px; color:rgba(255,255,255,.85); }
+.flight-detail strong { font-weight:600; color:white; }
+.flight-ref { font-size:10px; color:rgba(255,255,255,.3); letter-spacing:1px; margin-left:auto; }
+
+/* STATS BAR */
+.stats-bar { background:var(--deep-sea); display:flex; justify-content:center; flex-wrap:wrap; }
+.stat { padding:20px 40px; text-align:center; border-right:1px solid rgba(255,255,255,.08); min-width:130px; }
+.stat:last-child { border-right:none; }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:300; color:var(--sea-foam); line-height:1; margin-bottom:4px; }
+.stat-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.4); }
+
+/* NAV */
+.nav-tabs { background:white; border-bottom:2px solid var(--warm-sand); position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.08); }
+.nav-inner { max-width:1100px; margin:0 auto; padding:0 32px; display:flex; gap:0; overflow-x:auto; }
+.nav-tab { padding:16px 20px; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-light); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; white-space:nowrap; transition:all .2s; }
+.nav-tab:hover { color:var(--azure); }
+.nav-tab.active { color:var(--azure); border-bottom-color:var(--azure); }
+
+/* SECTIONS */
+.tab-section { display:none; }
+.tab-section.active { display:block; }
+.container { max-width:1100px; margin:0 auto; padding:0 32px; }
+section { padding:72px 0; }
+.section-label { font-size:10px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--terracotta); margin-bottom:12px; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(32px,5vw,52px); font-weight:300; color:var(--deep-sea); line-height:1.1; margin-bottom:48px; }
+
+/* TIMELINE */
+.timeline { position:relative; }
+.timeline::before { content:''; position:absolute; left:120px; top:0; bottom:0; width:1px; background:linear-gradient(to bottom,transparent,var(--azure) 10%,var(--azure) 90%,transparent); opacity:.25; }
+.day-block { display:grid; grid-template-columns:120px 1fr; gap:0 40px; position:relative; }
+.day-meta { text-align:right; padding:32px 0 32px; padding-top:36px; position:relative; }
+.day-meta::after { content:''; position:absolute; right:-47px; top:44px; width:13px; height:13px; border-radius:50%; background:var(--white); border:3px solid var(--azure); z-index:2; }
+.day-date { font-family:'Cormorant Garamond',serif; font-size:13px; font-weight:600; color:var(--azure); letter-spacing:1px; }
+.day-num { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; color:var(--text-light); line-height:1; }
+.day-card { background:white; border-radius:16px; padding:28px 32px; margin:20px 0; box-shadow:0 2px 20px rgba(0,0,0,.06); border-left:4px solid var(--azure); transition:transform .2s,box-shadow .2s; }
+.day-card:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(26,107,138,.12); }
+.day-card.transit { border-left-color:var(--gold); }
+.day-card.day-trip { border-left-color:var(--dusk); }
+.day-card.nature { border-left-color:var(--green); }
+.day-card.departure { border-left-color:var(--terracotta); }
+.card-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px; gap:16px; }
+.card-location { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; color:var(--deep-sea); line-height:1.1; }
+.card-badge { flex-shrink:0; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:5px 12px; border-radius:20px; background:#e8f4f9; color:var(--azure); margin-top:4px; }
+.card-badge.transit { background:#fef6e4; color:#a07020; }
+.card-badge.day-trip { background:#f3eaf5; color:var(--dusk); }
+.card-badge.nature { background:#eaf5ee; color:#2e7a4f; }
+.card-badge.departure { background:#fdf0eb; color:var(--terracotta); }
+.card-desc { font-size:13.5px; line-height:1.7; color:var(--text-mid); margin-bottom:20px; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.tag { font-size:11px; font-weight:500; padding:4px 12px; border-radius:20px; background:var(--sand); color:var(--text-mid); border:1px solid var(--warm-sand); }
+.card-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.card-section { background:var(--sand); border-radius:10px; padding:14px 16px; }
+.card-section-title { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--terracotta); margin-bottom:10px; }
+.card-section ul { list-style:none; display:flex; flex-direction:column; gap:5px; }
+.card-section ul li { font-size:12.5px; color:var(--text-mid); padding-left:14px; position:relative; line-height:1.5; }
+.card-section ul li::before { content:'·'; position:absolute; left:0; color:var(--azure); font-weight:bold; }
+
+/* HOTEL/FERRY/FLIGHT BLOCKS */
+.hotel-block { background:linear-gradient(135deg,#f0f8fc,#e8f4f9); border:1px solid #c8e8f3; border-radius:10px; padding:14px 16px; margin-top:16px; }
+.hotel-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--azure); margin-bottom:6px; }
+.hotel-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:600; color:var(--deep-sea); margin-bottom:4px; }
+.hotel-desc { font-size:12px; color:var(--text-mid); line-height:1.5; margin-bottom:6px; }
+.hotel-meta { display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; }
+.hotel-meta-item { font-size:11px; color:var(--text-mid); }
+.hotel-meta-item strong { color:var(--deep-sea); font-weight:600; }
+.hotel-confirmed { display:inline-flex; align-items:center; gap:4px; font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; background:#eaf5ee; color:#2e7a4f; padding:3px 8px; border-radius:10px; margin-bottom:8px; }
+.ferry-block { background:linear-gradient(135deg,#fef9ee,#fdf0d5); border:1px solid #f0d898; border-radius:10px; padding:14px 16px; margin-top:16px; display:flex; gap:16px; align-items:center; }
+.ferry-icon { font-size:28px; flex-shrink:0; }
+.ferry-info { flex:1; }
+.ferry-route { font-size:13px; font-weight:600; color:var(--deep-sea); margin-bottom:3px; }
+.ferry-detail { font-size:11.5px; color:var(--text-mid); }
+.warn-block { background:#fff8ee; border:1px solid #f0d898; border-left:4px solid var(--gold); border-radius:10px; padding:12px 16px; margin-top:16px; font-size:12.5px; color:var(--text-mid); line-height:1.6; }
+.warn-block strong { color:var(--deep-sea); }
+.note-block { background:#f0f8fc; border:1px solid #c8e8f3; border-left:4px solid var(--azure); border-radius:10px; padding:12px 16px; margin-top:16px; font-size:12.5px; color:var(--text-mid); line-height:1.6; }
+
+/* BOOKING CHECKLIST */
+.checklist-section { background:var(--deep-sea); padding:80px 0; }
+.checklist-section .section-label { color:var(--sea-foam); }
+.checklist-section .section-title { color:white; margin-bottom:12px; }
+.checklist-intro { font-size:14px; color:rgba(255,255,255,.55); margin-bottom:48px; }
+.checklist-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+.checklist-cat { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px; }
+.cat-header { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+.cat-icon { font-size:22px; }
+.cat-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:white; }
+.check-item { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; cursor:pointer; }
+.check-item:last-child { margin-bottom:0; }
+.check-box { width:20px; height:20px; min-width:20px; border-radius:5px; border:2px solid rgba(255,255,255,.25); margin-top:1px; transition:all .2s; display:flex; align-items:center; justify-content:center; }
+.check-item.checked .check-box { background:var(--sea-foam); border-color:var(--sea-foam); }
+.check-item.checked .check-box::after { content:'✓'; font-size:12px; color:var(--deep-sea); font-weight:bold; }
+.check-item.checked .check-text { text-decoration:line-through; opacity:.4; }
+.check-text { font-size:13px; color:rgba(255,255,255,.8); line-height:1.5; }
+.priority { display:inline-block; font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:2px 7px; border-radius:10px; margin-left:6px; vertical-align:middle; }
+.priority.done { background:rgba(74,155,111,.3); color:#80d4a8; }
+.priority.urgent { background:rgba(196,96,42,.3); color:#f0a070; }
+.priority.soon { background:rgba(201,149,42,.3); color:#f0c870; }
+
+/* MAP */
+.map-section { background:white; }
+.map-container { border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.1); margin-bottom:32px; }
+.map-container iframe { width:100%; height:500px; border:none; display:block; }
+.stops-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+.stop-card { background:var(--sand); border-radius:12px; padding:16px; border-left:4px solid var(--azure); }
+.stop-num { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; color:var(--azure); line-height:1; margin-bottom:4px; }
+.stop-name { font-size:14px; font-weight:600; color:var(--deep-sea); margin-bottom:4px; }
+.stop-dates { font-size:11px; color:var(--text-light); margin-bottom:6px; }
+.stop-desc { font-size:12px; color:var(--text-mid); line-height:1.5; }
+
+/* CALENDAR */
+.calendar-section { background:var(--sand); }
+.cal-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:2px; border-radius:12px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,.08); }
+.cal-header { background:var(--deep-sea); color:rgba(255,255,255,.7); text-align:center; padding:12px 4px; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
+.cal-day { background:white; min-height:90px; padding:8px; position:relative; }
+.cal-day.other-month { background:#f8f6f2; opacity:.5; }
+.cal-day.trip-day { background:#f0f8fc; }
+.cal-day.today { background:#fff8f0; }
+.cal-date { font-size:12px; font-weight:600; color:var(--text-light); margin-bottom:4px; }
+.cal-day.trip-day .cal-date { color:var(--azure); }
+.cal-event { font-size:10px; line-height:1.4; margin-bottom:3px; padding:2px 5px; border-radius:4px; }
+.cal-event.travel { background:#fef0d5; color:#a07020; }
+.cal-event.hotel { background:#e8f4f9; color:var(--azure); }
+.cal-event.activity { background:#eaf5ee; color:#2e7a4f; }
+.cal-event.flight { background:#fdf0eb; color:var(--terracotta); }
+.cal-legend { display:flex; gap:16px; flex-wrap:wrap; margin-top:20px; }
+.cal-leg { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-mid); }
+.cal-leg-dot { width:10px; height:10px; border-radius:2px; }
+
+/* WEATHER */
+.weather-section { background:white; }
+.weather-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; margin-bottom:32px; }
+.weather-card { border-radius:16px; overflow:hidden; }
+.weather-header { padding:24px; color:white; }
+.weather-header.dubrovnik { background:linear-gradient(135deg,#1a6b8a,#0d3d52); }
+.weather-header.split { background:linear-gradient(135deg,#2a7a9a,#1a5a72); }
+.weather-header.hvar { background:linear-gradient(135deg,#c9952a,#a07020); }
+.weather-header.sheraton { background:linear-gradient(135deg,#4a9b6f,#2e7a4f); }
+.weather-place { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; margin-bottom:4px; }
+.weather-dates { font-size:11px; opacity:.7; letter-spacing:1px; margin-bottom:16px; }
+.weather-temp { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; line-height:1; }
+.weather-temp span { font-size:18px; vertical-align:top; margin-top:8px; display:inline-block; }
+.weather-body { padding:20px; background:var(--sand); }
+.weather-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--warm-sand); font-size:12.5px; color:var(--text-mid); }
+.weather-row:last-child { border-bottom:none; }
+.weather-row strong { color:var(--deep-sea); font-weight:600; }
+.weather-tip { margin-top:12px; padding:10px 12px; background:rgba(26,107,138,.08); border-radius:8px; font-size:12px; color:var(--text-mid); line-height:1.5; }
+
+/* PACKING */
+.packing-section { background:var(--sand); }
+.pack-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+.pack-cat { background:white; border-radius:16px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
+.pack-cat-title { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+.pack-cat-icon { font-size:24px; }
+.pack-cat-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--deep-sea); }
+.pack-item { display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; cursor:pointer; }
+.pack-item:last-child { margin-bottom:0; }
+.pack-check { width:18px; height:18px; min-width:18px; border-radius:4px; border:2px solid var(--warm-sand); margin-top:1px; transition:all .2s; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.pack-item.checked .pack-check { background:var(--azure); border-color:var(--azure); }
+.pack-item.checked .pack-check::after { content:'✓'; font-size:11px; color:white; font-weight:bold; }
+.pack-item.checked .pack-text { text-decoration:line-through; opacity:.4; }
+.pack-text { font-size:13px; color:var(--text-mid); line-height:1.5; }
+.pack-text .essential { font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; background:rgba(196,96,42,.15); color:var(--terracotta); padding:1px 5px; border-radius:4px; margin-left:4px; }
+.pack-progress { margin-top:24px; }
+.pack-progress-bar { height:4px; background:var(--warm-sand); border-radius:2px; overflow:hidden; }
+.pack-progress-fill { height:100%; background:var(--azure); border-radius:2px; transition:width .3s; }
+.pack-count { font-size:11px; color:var(--text-light); margin-top:6px; }
+
+/* COSTS */
+.costs-section { background:white; }
+.cost-item { display:flex; align-items:center; gap:16px; padding:16px 0; border-bottom:1px solid var(--sand); }
+.cost-item:last-child { border-bottom:none; }
+.cost-icon { font-size:22px; min-width:36px; text-align:center; }
+.cost-info { flex:1; }
+.cost-name { font-size:14px; font-weight:600; color:var(--deep-sea); margin-bottom:2px; }
+.cost-detail { font-size:12px; color:var(--text-light); }
+.cost-amount { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--deep-sea); white-space:nowrap; }
+.cost-status { font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:3px 8px; border-radius:8px; white-space:nowrap; }
+.cost-status.paid { background:#eaf5ee; color:#2e7a4f; }
+.cost-status.pending { background:#fef6e4; color:#a07020; }
+.cost-total { background:linear-gradient(135deg,var(--deep-sea),var(--azure)); border-radius:16px; padding:28px 32px; margin-top:32px; display:flex; justify-content:space-between; align-items:center; }
+.cost-total-label { font-size:14px; font-weight:600; color:rgba(255,255,255,.8); letter-spacing:1px; text-transform:uppercase; }
+.cost-total-amount { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; color:white; }
+.cost-total-note { font-size:11px; color:rgba(255,255,255,.5); margin-top:4px; }
+.cost-cats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:32px; }
+.cost-cat { background:var(--sand); border-radius:12px; padding:16px; border-top:3px solid var(--azure); }
+.cost-cat-name { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+.cost-cat-amount { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; color:var(--deep-sea); }
+.cost-cat-note { font-size:11px; color:var(--text-light); }
+
+/* FOOTER */
+footer { background:var(--deep-sea); text-align:center; padding:40px; }
+footer p { font-size:12px; color:rgba(255,255,255,.3); letter-spacing:1px; margin-bottom:6px; }
+footer strong { color:var(--sea-foam); font-weight:600; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+.hero-content > * { animation:fadeUp .8s ease both; }
+.hero-eyebrow{animation-delay:.1s} .hero-title{animation-delay:.25s} .hero-subtitle{animation-delay:.4s} .hero-dates{animation-delay:.55s}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .timeline::before{left:70px}
+  .day-block{grid-template-columns:70px 1fr;gap:0 20px}
+  .day-meta::after{right:-30px}
+  .card-grid{grid-template-columns:1fr}
+  .checklist-grid{grid-template-columns:1fr}
+  .stat{padding:16px 20px;min-width:100px}
+  .flights-inner{grid-template-columns:1fr}
+  .flight-group{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:14px 0}
+  .flight-group:last-child{border-bottom:none}
+  section{padding:48px 0}
+  .cal-grid{font-size:10px}
+  .cal-day{min-height:60px;padding:4px}
+  .cost-cats{grid-template-columns:repeat(2,1fr)}
+}
+@media print{
+  .hero{height:auto;padding:60px 0;min-height:unset}
+  .nav-tabs{display:none}
+  .tab-section{display:block!important}
+  .day-card{break-inside:avoid}
+}
+a.ext { color:var(--azure); text-decoration:none; font-weight:600; border-bottom:1px solid rgba(26,107,138,.3); }
+a.ext:hover { border-color:var(--azure); }
 </style>
 </head>
 <body>
 
-<!-- ────── HERO ────── -->
+<!-- HERO -->
 <header class="hero">
-  <div class="hero-circles">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="hero-circles"><span></span><span></span><span></span></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Dalmatian Coast · Croatia</p>
+    <p class="hero-eyebrow">Dalmatian Coast · Croatia · Family of 4</p>
     <h1 class="hero-title">Our <em>Croatia</em><br>Holiday</h1>
-    <p class="hero-subtitle">Dubrovnik · Mljet · Split · Vis · Hvar · Brač · Krka</p>
+    <p class="hero-subtitle">Dubrovnik · Split · Hvar · Vis · Blue Cave · Sheraton</p>
     <div class="hero-dates">
-      <span>13 June 2026</span>
-      <span class="sep">—</span>
-      <span>25 June 2026</span>
+      <span>13 June 2026</span><span class="sep">—</span><span>25 June 2026</span>
     </div>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -801,792 +304,1299 @@
   </svg>
 </header>
 
-<!-- ────── STATS BAR ────── -->
-<div class="stats-bar">
-  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Nights</div></div>
-  <div class="stat"><div class="stat-num">7</div><div class="stat-label">Destinations</div></div>
-  <div class="stat"><div class="stat-num">2</div><div class="stat-label">National Parks</div></div>
-  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Islands</div></div>
-  <div class="stat"><div class="stat-num">5</div><div class="stat-label">Ferry Hops</div></div>
-  <div class="stat"><div class="stat-num">~€4k</div><div class="stat-label">Budget (2 pax)</div></div>
+<!-- FLIGHTS BANNER -->
+<div class="flights-banner">
+  <div class="flights-inner">
+    <div class="flight-group">
+      <div class="flight-group-label">✈️ Outbound · Saturday 13 June</div>
+      <div class="flight-row">
+        <span class="flight-who">Delphine, Emily &amp; Jeremy</span>
+        <span class="flight-detail">SN3351 · <strong>BRU 13:20 → DBV 17:30</strong> · Brussels Airlines</span>
+        <span class="flight-ref">9J2BDV</span>
+      </div>
+      <div class="flight-row">
+        <span class="flight-who">Chris</span>
+        <span class="flight-detail">LG415 · <strong>LUX 16:50 → DBV 19:15</strong> · Luxair</span>
+        <span class="flight-ref">9IZJLZ</span>
+      </div>
+    </div>
+    <div class="flight-group">
+      <div class="flight-group-label">✈️ Return · Thursday 25 June</div>
+      <div class="flight-row">
+        <span class="flight-who">Delphine, Emily &amp; Jeremy</span>
+        <span class="flight-detail">OS624 · <strong>DBV 13:00 → VIE 14:20</strong>, then OS295 VIE 15:00 → BRU 16:45</span>
+        <span class="flight-ref">9J2BDV</span>
+      </div>
+      <div class="flight-row">
+        <span class="flight-who">Chris</span>
+        <span class="flight-detail">ZCOOWL · <strong>DBV 13:10 → ZRH → LUX</strong> · arrives 18:35</span>
+        <span class="flight-ref">ZCOOWL</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- ────── ITINERARY ────── -->
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Nights</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Bases</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">Islands</div></div>
+  <div class="stat"><div class="stat-num">1</div><div class="stat-label">National Park</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Ferry Hops</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">People</div></div>
+</div>
+
+<!-- NAV TABS -->
+<nav class="nav-tabs">
+  <div class="nav-inner">
+    <div class="nav-tab active" onclick="showTab('itinerary',this)">📋 Itinerary</div>
+    <div class="nav-tab" onclick="showTab('checklist',this)">✅ Checklist</div>
+    <div class="nav-tab" onclick="showTab('map',this)">🗺️ Map</div>
+    <div class="nav-tab" onclick="showTab('calendar',this)">📅 Calendar</div>
+    <div class="nav-tab" onclick="showTab('weather',this)">🌤️ Weather</div>
+    <div class="nav-tab" onclick="showTab('packing',this)">🎒 Packing</div>
+    <div class="nav-tab" onclick="showTab('costs',this)">💰 Costs</div>
+  </div>
+</nav>
+
+<!-- ═══════════════ ITINERARY ═══════════════ -->
+<div id="tab-itinerary" class="tab-section active">
 <section>
-  <div class="container">
-    <p class="section-label">Day by Day</p>
-    <h2 class="section-title">Full Itinerary</h2>
+<div class="container">
+  <p class="section-label">Day by Day</p>
+  <h2 class="section-title">Full Itinerary</h2>
+  <div class="timeline">
 
-    <div class="timeline">
-
-      <!-- DUBROVNIK -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Sat</div>
-          <div class="day-num">13</div>
+    <!-- DAY 1 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Sat</div><div class="day-num">13</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Dubrovnik<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Arrive — settle in</small></div>
+          <span class="card-badge">2 Nights</span>
         </div>
-        <div class="day-card">
-          <div class="card-header">
-            <div class="card-location">Dubrovnik<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Arrive 8pm · Check in</small></div>
-            <span class="card-badge">2 Nights</span>
-          </div>
-          <p class="card-desc">Arrive at Dubrovnik Airport at 8pm. Transfer to hotel, freshen up and head to the Old Town for a first evening glass of wine overlooking the Stradun. The UNESCO-walled city is magical at night.</p>
-
-          <div class="hotel-block">
-            <div class="hotel-label">🏨 Recommended Hotel</div>
-            <div class="hotel-name">St. Joseph's Boutique Hotel</div>
-            <div class="hotel-desc">A 16th-century historic house fully restored within the UNESCO-protected Old Town walls. Just footsteps from the Stradun. Intimate, atmospheric and beautifully located.</div>
-            <div class="hotel-alt"><strong>Alt:</strong> Boutique Hotel Stari Grad — also inside the Old Town walls with a Michelin-recommended rooftop restaurant (Above 5).</div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🏛️ Things To Do</div>
-              <ul>
-                <li>Walk the ancient City Walls (go at 8am)</li>
-                <li>Stradun promenade & old town exploration</li>
-                <li>Rector's Palace & Cathedral</li>
-                <li>Sponza Palace</li>
-                <li>Buža Bar — cliffside sunset drinks</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Restaurants</div>
-              <ul>
-                <li>Restaurant 360° — fine dining on the walls</li>
-                <li>Nautika — classic Dalmatian seafood</li>
-                <li>Konoba Dubrava — local & unfussy</li>
-                <li>Buža Bar — sunset drinks on the cliffs</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🏰 UNESCO Old Town</span>
-            <span class="tag">🌊 City Walls Walk</span>
-            <span class="tag">🎬 Game of Thrones Location</span>
+        <p class="card-desc">Two separate arrivals: Delphine, Emily &amp; Jeremy land at 17:30 (SN3351 from Brussels), Chris follows at 19:15 (LG415 from Luxembourg). Check in to La Vita e Bella VI — 2 Deluxe Suites inside the Old Town walls. Evening stroll on the Stradun, dinner nearby. Don't try to do too much — you've all travelled.</p>
+        <div class="hotel-block">
+          <div class="hotel-confirmed">✓ Confirmed — Booking.com ref: 602639174 5 · PIN: 9967</div>
+          <div class="hotel-label">🏨 Hotel</div>
+          <div class="hotel-name">La Vita e Bella VI — Luxury Suites</div>
+          <div class="hotel-desc">A 16th-century palazzo fully restored inside the UNESCO-protected Old Town walls. 4 Palmotićeva ulica — footsteps from the Stradun. 2 Deluxe Suites, 2 adults + 2 children (11 &amp; 13).</div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item"><strong>Check-in:</strong> Sat 13 Jun · 15:00–21:00</div>
+            <div class="hotel-meta-item"><strong>Check-out:</strong> Mon 15 Jun · by 10:00</div>
+            <div class="hotel-meta-item"><strong>Total:</strong> €1,317.20</div>
+            <div class="hotel-meta-item"><strong>Phone:</strong> +385 99 3510445</div>
           </div>
         </div>
-      </div>
-
-      <!-- MLJET DAY TRIP -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Mon</div>
-          <div class="day-num">15</div>
-        </div>
-        <div class="day-card day-trip">
-          <div class="card-header">
-            <div class="card-location">Mljet National Park<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Day trip from Dubrovnik</small></div>
-            <span class="card-badge day-trip">Day Trip</span>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🍽️ Dinner options</div>
+            <ul><li>Konoba Dubrava — local &amp; unfussy</li><li>Taj Mahal — Bosnian, great for kids</li><li>Keep it simple — early night</li></ul>
           </div>
-          <p class="card-desc">Take the morning Jadrolinija ferry or Kapetan Luka Krilo catamaran from Dubrovnik to Mljet (~1.5 hrs). One of Croatia's most serene national parks — two interconnected saltwater lakes, a 12th-century monastery on a tiny island, pine-forest cycling, and crystalline swimming. Return to Dubrovnik for dinner.</p>
-
-          <div class="ferry-block">
-            <div class="ferry-icon">⛴️</div>
-            <div class="ferry-info">
-              <div class="ferry-route">Dubrovnik → Pomena (Mljet)</div>
-              <div class="ferry-detail">Jadrolinija Route 832 or Kapetan Luka Krilo · ~1.5 hrs · Book at <strong>jadrolinija.hr</strong></div>
-            </div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🌿 In the Park</div>
-              <ul>
-                <li>Malo & Veliko jezero (saltwater lakes)</li>
-                <li>Boat to the monastery island (Sveta Marija)</li>
-                <li>Cycle the lakeside trails</li>
-                <li>Swimming in crystal-clear lake water</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Lunch</div>
-              <ul>
-                <li>Monastery island restaurant — simple grilled fish and local wine with stunning views</li>
-                <li>Pack a picnic for the lakeside</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🏞️ National Park</span>
-            <span class="tag">🚴 Cycling</span>
-            <span class="tag">🏊 Swimming</span>
-            <span class="tag">⛪ Monastery Island</span>
+          <div class="card-section">
+            <div class="card-section-title">⚠️ Notes</div>
+            <ul><li>Message host in advance — Chris arrives at 19:15, close to the 21:00 check-in window</li><li>Host phone: +385 99 3510445</li></ul>
           </div>
         </div>
-      </div>
-
-      <!-- TRANSFER + SPLIT -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Tue</div>
-          <div class="day-num">16</div>
-        </div>
-        <div class="day-card transit">
-          <div class="card-header">
-            <div class="card-location">Dubrovnik → Split<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Transfer day</small></div>
-            <span class="card-badge transit">Transit</span>
-          </div>
-          <p class="card-desc">Morning bus or fast catamaran transfer from Dubrovnik to Split (~3 hrs by bus / 4.5 hrs scenic sea route). Check into your Split hotel, then spend the afternoon and evening exploring Diocletian's Palace and the Riva promenade.</p>
-
-          <div class="hotel-block">
-            <div class="hotel-label">🏨 Hotel (2 nights + return night on Jun 24)</div>
-            <div class="hotel-name">Heritage Hotel Santa Lucia</div>
-            <div class="hotel-desc">Located on People's Square just outside Diocletian's Palace walls. Elegant boutique hotel with a secret patio, rooftop terrace, and excellent breakfast included. Book 3 nights total (Jun 16, 17 + Jun 24).</div>
-            <div class="hotel-alt"><strong>Alt:</strong> Judita Palace Boutique Hotel — romantic, right inside Diocletian's Palace itself. · <strong>Alt 2:</strong> Hotel Vestibul Palace — Small Luxury Hotels of the World member, in the heart of the palace.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SPLIT FULL DAY -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Wed</div>
-          <div class="day-num">17</div>
-        </div>
-        <div class="day-card">
-          <div class="card-header">
-            <div class="card-location">Split<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Full day exploration</small></div>
-            <span class="card-badge">1 Night</span>
-          </div>
-          <p class="card-desc">A full day in one of the most extraordinary cities in Europe. Diocletian's Palace is not just a ruin — people live, eat and drink inside its 1,700-year-old walls. Lose yourself in the marble alleyways, climb the bell tower, explore the basement halls.</p>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🏛️ Must-See</div>
-              <ul>
-                <li>Diocletian's Palace (basement halls + bell tower)</li>
-                <li>Cathedral of St. Domnius</li>
-                <li>Riva waterfront promenade</li>
-                <li>Marjan Hill hike (pine forest, panoramic views)</li>
-                <li>People's Square (Narodni trg)</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Restaurants</div>
-              <ul>
-                <li>Zoi Split — long lunch on the Riva terrace</li>
-                <li>Bokeria — creative Croatian cuisine</li>
-                <li>Konoba Matejuška — local fish spot in the harbour</li>
-                <li>Uje Oil Bar — wine & olive oil cellar inside the palace</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIS -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Thu</div>
-          <div class="day-num">18</div>
-        </div>
-        <div class="day-card">
-          <div class="card-header">
-            <div class="card-location">Vis Island<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Croatia's most unspoiled island</small></div>
-            <span class="card-badge">2 Nights</span>
-          </div>
-          <p class="card-desc">Morning fast catamaran Split → Vis (via Bol & Hvar). Vis was a closed military zone until 1989 and remains gloriously off the beaten track. Filming location for Mamma Mia 2. Remote, characterful, extraordinary food and wine.</p>
-
-          <div class="ferry-block">
-            <div class="ferry-icon">⛴️</div>
-            <div class="ferry-info">
-              <div class="ferry-route">Split → Bol → Hvar → Vis (Route 659)</div>
-              <div class="ferry-detail">NEW 2026 daily catamaran · Departs 07:30 · Arrives Vis 09:25 · ~€9–15pp · Book at jadrolinija.hr</div>
-            </div>
-          </div>
-
-          <div class="hotel-block">
-            <div class="hotel-label">🏨 Recommended Hotel</div>
-            <div class="hotel-name">Pomâlo Inn</div>
-            <div class="hotel-desc">The most stylish hotel on Vis. Boho-chic boutique in a 1810 Venetian stone building, 10 rooms, bespoke linens, organic local products. Concierge arrange boat trips, vintage car tours. "Take it Easy" philosophy.</div>
-            <div class="hotel-alt"><strong>Alt:</strong> Hotel San Giorgio — old town location, gorgeous Mediterranean garden courtyard, on-site Boccadoro restaurant (one of the best on the island).</div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🌊 Activities</div>
-              <ul>
-                <li>Blue Cave boat tour (Biševo island) — book early morning</li>
-                <li>Stiniva Cove — boat access only, stunning</li>
-                <li>Green Cave on Ravnik island — snorkelling inside</li>
-                <li>Komiža fishing village (taxi or scooter)</li>
-                <li>Vugava white wine tasting</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Restaurants</div>
-              <ul>
-                <li>Pojoda — one of Croatia's best restaurants (book ahead)</li>
-                <li>Konoba Roki's (Milna) — legendary lamb under the peka, book well in advance</li>
-                <li>Boccadoro (Hotel San Giorgio) — superb Dalmatian</li>
-                <li>Try viška pogača — local anchovy pastry</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🎬 Mamma Mia 2 Location</span>
-            <span class="tag">🔵 Blue Cave</span>
-            <span class="tag">🍷 Vugava Wine</span>
-            <span class="tag">🏖️ Stiniva Cove</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- HVAR -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Sat</div>
-          <div class="day-num">20</div>
-        </div>
-        <div class="day-card">
-          <div class="card-header">
-            <div class="card-location">Hvar Town<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Croatia's sunniest island</small></div>
-            <span class="card-badge">2 Nights</span>
-          </div>
-          <p class="card-desc">Fast catamaran from Vis to Hvar (~40 mins). Hvar mixes history, lavender fields, glamour and some of Croatia's best food and nightlife. The oldest public theatre in Europe, a Venetian fortress, and the most beautiful harbour on the Adriatic.</p>
-
-          <div class="ferry-block">
-            <div class="ferry-icon">⛴️</div>
-            <div class="ferry-info">
-              <div class="ferry-route">Vis → Hvar (Route 659)</div>
-              <div class="ferry-detail">~40 minutes · ~€9–12pp · Jadrolinija · Book at jadrolinija.hr</div>
-            </div>
-          </div>
-
-          <div class="hotel-block">
-            <div class="hotel-label">🏨 Recommended Hotel</div>
-            <div class="hotel-name">Palace Elisabeth — Hvar Heritage Hotel</div>
-            <div class="hotel-desc">The oldest hotel on Hvar (1800s), named after Empress Elisabeth of Austria. Located directly between St. Stephen's Cathedral and Hvar's historic theatre on the main square. Staff greet guests from the ferry. Rooms overlook Hvar Bay or the Paklinski Islands. Breakfast included with made-to-order dishes.</div>
-            <div class="hotel-alt"><strong>Alt:</strong> Adriana Hvar Spa Hotel — strikingly stylish, rooftop pool and bar, prime harbour position. · <strong>Alt 2:</strong> Beach Bay Hvar — chic boutique, 30m from beach, sea-view balconies.</div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🌺 Activities</div>
-              <ul>
-                <li>Hvar Old Town, St. Stephen's Square & Arsenal</li>
-                <li>Spanish Fortress (Fortica) — climb for panoramic views</li>
-                <li>Water taxi to Pakleni Islands — secluded coves</li>
-                <li>Bus to Stari Grad — UNESCO ancient Greek town</li>
-                <li>Hula Hula sunset beach bar (go by 5pm)</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Restaurants</div>
-              <ul>
-                <li>Gariful — iconic Hvar waterfront seafood</li>
-                <li>Dalmatino — wine & Dalmatian small plates</li>
-                <li>Hula Hula Beach Bar — sunset cocktails</li>
-                <li>Mizarola — creative seasonal menu</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🌸 Lavender Island</span>
-            <span class="tag">🏰 Spanish Fortress</span>
-            <span class="tag">🏝️ Pakleni Islands</span>
-            <span class="tag">🎭 Oldest Public Theatre in Europe</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BRAC -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Mon</div>
-          <div class="day-num">22</div>
-        </div>
-        <div class="day-card">
-          <div class="card-header">
-            <div class="card-location">Bol, Brač Island<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Home of Zlatni Rat</small></div>
-            <span class="card-badge">2 Nights</span>
-          </div>
-          <p class="card-desc">Morning ferry Hvar → Bol (~30–40 mins). Bol is home to Zlatni Rat — Croatia's most famous beach, a golden pebble spit that changes shape with the wind and current. Dramatic cliffs, olive groves and the highest peak on any Croatian island.</p>
-
-          <div class="ferry-block">
-            <div class="ferry-icon">⛴️</div>
-            <div class="ferry-info">
-              <div class="ferry-route">Hvar → Bol, Brač (Route 659)</div>
-              <div class="ferry-detail">~30–40 minutes · ~€9–12pp · Jadrolinija · Book at jadrolinija.hr</div>
-            </div>
-          </div>
-
-          <div class="hotel-block">
-            <div class="hotel-label">🏨 Recommended Hotel</div>
-            <div class="hotel-name">Villa Giardino Heritage Boutique Hotel</div>
-            <div class="hotel-desc">Located in the Bol heritage area with a beautiful garden terrace, sea-view breakfast, pool and attentive concierge service. 4-star, beautifully renovated, excellent reviews.</div>
-            <div class="hotel-alt"><strong>Alt:</strong> Boutique Hotel Bol — small, contemporary design, south-facing sea views to Hvar, ferry pickup/dropoff included, superb breakfast. · <strong>Alt 2:</strong> Lifestyle Hotel Vitar (Adults Only) — rooftop pool and hot tub.</div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🏖️ Activities</div>
-              <ul>
-                <li>Zlatni Rat beach (arrive early for a spot)</li>
-                <li>Vidova Gora hike or taxi (778m summit)</li>
-                <li>Wander Bol village & Dominican monastery</li>
-                <li>Rent bikes — olive groves & vineyards</li>
-                <li>Kitesurfing or windsurfing at Zlatni Rat</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Restaurants</div>
-              <ul>
-                <li>Konoba Gušt — local favourite, grilled fish</li>
-                <li>Tavern Topolino — relaxed pasta & seafood</li>
-                <li>Konoba Mlin — traditional Dalmatian, scenic setting</li>
-                <li>Vinogradište — wine bar with island wine</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🏖️ Zlatni Rat Beach</span>
-            <span class="tag">🏔️ Vidova Gora</span>
-            <span class="tag">🌊 Kitesurfing</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BACK TO SPLIT + KRKA -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Wed</div>
-          <div class="day-num">24</div>
-        </div>
-        <div class="day-card national-park">
-          <div class="card-header">
-            <div class="card-location">Brač → Split + Krka NP<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Return to base + day trip</small></div>
-            <span class="card-badge green">Day Trip</span>
-          </div>
-          <p class="card-desc">Morning fast catamaran back to Split (~1 hr). Drop luggage at Heritage Hotel Santa Lucia (third night). Hire a car and drive to Krka National Park (~1h 20min). A spectacular series of travertine waterfalls with wooden boardwalks through the cascades. Croatia's most dramatic inland nature. Return to Split for a final farewell dinner.</p>
-
-          <div class="ferry-block">
-            <div class="ferry-icon">⛴️</div>
-            <div class="ferry-info">
-              <div class="ferry-route">Bol → Split (Route 659)</div>
-              <div class="ferry-detail">~1 hour · ~€9–12pp · Jadrolinija · Morning departure</div>
-            </div>
-          </div>
-
-          <div class="card-grid">
-            <div class="card-section">
-              <div class="card-section-title">🏞️ Krka National Park</div>
-              <ul>
-                <li>Skradinski Buk — the main waterfall circuit (3 hrs)</li>
-                <li>Wooden boardwalks through the cascades</li>
-                <li>Swimming area (check current rules in advance)</li>
-                <li>Book tickets at npkrka.hr in advance</li>
-                <li>Arrive by 9am to avoid the crowds</li>
-              </ul>
-            </div>
-            <div class="card-section">
-              <div class="card-section-title">🍽️ Final Dinner in Split</div>
-              <ul>
-                <li>Uje Oil Bar — wine cave inside Diocletian's Palace</li>
-                <li>Bokeria — creative Croatian cuisine</li>
-                <li>Konoba Matejuška — fresh catch by the harbour</li>
-              </ul>
-            </div>
-          </div>
-          <div class="tags" style="margin-top:16px;">
-            <span class="tag">🏞️ National Park</span>
-            <span class="tag">💦 Waterfalls</span>
-            <span class="tag">🚗 Car Hire Day</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- DEPART -->
-      <div class="day-block">
-        <div class="day-meta">
-          <div class="day-date">Thu</div>
-          <div class="day-num">25</div>
-        </div>
-        <div class="day-card transit">
-          <div class="card-header">
-            <div class="card-location">Depart Split<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Noon departure ✈️</small></div>
-            <span class="card-badge transit">Departure</span>
-          </div>
-          <p class="card-desc">Check out of hotel by ~10am. Head to Split Airport (SPU) — 30 mins from Old Town. Noon flight home. Allow yourself one last pastry and coffee on the Riva before leaving!</p>
-          <div class="tags" style="margin-top:12px;">
-            <span class="tag">✈️ Split Airport (SPU)</span>
-            <span class="tag">🕛 Noon Flight</span>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end timeline -->
-  </div>
-</section>
-
-<!-- ────── FERRY SUMMARY ────── -->
-<section class="ferry-section">
-  <div class="container">
-    <p class="section-label">Getting Around</p>
-    <h2 class="section-title">Ferry Summary</h2>
-    <p style="font-size:13.5px;color:var(--text-mid);margin-bottom:32px;line-height:1.7;">All island hops use <strong>Jadrolinija Route 659</strong> — the brand-new 2026 daily fast catamaran connecting Split, Bol (Brač), Hvar Town and Vis. Departs Split at <strong>07:30</strong> and operates in reverse from Vis. Two departures per day, runs <strong>19 June – 13 September 2026</strong>. Book at <a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></p>
-
-    <table class="ferry-table">
-      <thead>
-        <tr>
-          <th>Route</th>
-          <th>Company / Line</th>
-          <th>Duration</th>
-          <th>Approx Price (pp)</th>
-          <th>Book At</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="ferry-route-cell">Dubrovnik → Mljet (Pomena)</td>
-          <td>Jadrolinija Ro. 832 / Kapetan Luka Krilo</td>
-          <td>~1.5 hrs</td>
-          <td class="ferry-price">€15–20</td>
-          <td><a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></td>
-        </tr>
-        <tr>
-          <td class="ferry-route-cell">Dubrovnik → Split</td>
-          <td>Bus (FlixBus/Croatia Bus) or Krilo catamaran</td>
-          <td>3 hrs / 4.5 hrs</td>
-          <td class="ferry-price">€10–25</td>
-          <td><a href="https://getbybus.com" target="_blank" class="ext-link">getbybus.com</a></td>
-        </tr>
-        <tr>
-          <td class="ferry-route-cell">Split → Vis (via Bol + Hvar)</td>
-          <td>Jadrolinija Route 659 ⭐ NEW 2026</td>
-          <td>~2 hrs</td>
-          <td class="ferry-price">€9–15</td>
-          <td><a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></td>
-        </tr>
-        <tr>
-          <td class="ferry-route-cell">Vis → Hvar Town</td>
-          <td>Jadrolinija Route 659 ⭐ NEW 2026</td>
-          <td>~40 min</td>
-          <td class="ferry-price">€9–12</td>
-          <td><a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></td>
-        </tr>
-        <tr>
-          <td class="ferry-route-cell">Hvar → Bol (Brač)</td>
-          <td>Jadrolinija Route 659 ⭐ NEW 2026</td>
-          <td>~35 min</td>
-          <td class="ferry-price">€9–12</td>
-          <td><a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></td>
-        </tr>
-        <tr>
-          <td class="ferry-route-cell">Bol → Split</td>
-          <td>Jadrolinija Route 659 ⭐ NEW 2026</td>
-          <td>~1 hr</td>
-          <td class="ferry-price">€9–12</td>
-          <td><a href="https://www.jadrolinija.hr" target="_blank" class="ext-link">jadrolinija.hr</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div style="margin-top:24px;padding:16px 20px;background:#fff8ee;border:1px solid #f0d898;border-radius:10px;font-size:13px;color:var(--text-mid);">
-      💡 <strong>Car hire:</strong> Only needed twice — Day 3 in Dubrovnik area (optional, for Mljet flexibility) and Day 12 in Split for Krka National Park. Hire from Split via <a href="https://www.rentalcars.com" target="_blank" class="ext-link">rentalcars.com</a>. Budget ~€50/day.
-    </div>
-  </div>
-</section>
-
-<!-- ────── TODO / BOOKING CHECKLIST ────── -->
-<section class="todo-section">
-  <div class="container">
-    <p class="section-label">Booking Checklist</p>
-    <h2 class="section-title">Everything You<br>Need to Book</h2>
-    <p class="todo-intro">Click each item to check it off as you go. Items marked URGENT should be booked immediately — June is peak season and sell out fast.</p>
-
-    <div class="todo-grid">
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">🏨</span>
-          <span class="todo-cat-title">Hotels</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">St. Joseph's Boutique Hotel, Dubrovnik (2 nights, Jun 13–15) <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Heritage Hotel Santa Lucia, Split (3 nights: Jun 16–17 + Jun 24) <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Pomâlo Inn (or Hotel San Giorgio), Vis (2 nights, Jun 18–19) <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Palace Elisabeth, Hvar Town (2 nights, Jun 20–21) <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Villa Giardino or Boutique Hotel Bol, Brač (2 nights, Jun 22–23) <span class="priority urgent">Urgent</span></div>
-        </div>
-      </div>
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">⛴️</span>
-          <span class="todo-cat-title">Ferries</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Dubrovnik → Mljet (Pomena) — Jun 15 morning, jadrolinija.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Split → Vis (Route 659) — Jun 18, departs 07:30, jadrolinija.hr <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Vis → Hvar (Route 659) — Jun 20, jadrolinija.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Hvar → Bol/Brač (Route 659) — Jun 22, jadrolinija.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Bol → Split (Route 659) — Jun 24, jadrolinija.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Dubrovnik → Split (bus or catamaran) — Jun 16 morning</div>
-        </div>
-      </div>
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">🎟️</span>
-          <span class="todo-cat-title">Attractions</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Dubrovnik City Walls — book online at visitdubrovnik.hr <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Mljet National Park entry — book at np-mljet.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Blue Cave boat tour from Vis — book via Vis hotel concierge <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Krka National Park tickets — book online at npkrka.hr <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Diocletian's Palace bell tower + basement, Split</div>
-        </div>
-      </div>
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">🍽️</span>
-          <span class="todo-cat-title">Restaurants</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Restaurant 360°, Dubrovnik — essential to book ahead <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Konoba Roki's, Vis (Milna) — legendary peka, book well in advance <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Pojoda restaurant, Vis — one of Croatia's best, book ahead <span class="priority urgent">Urgent</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Gariful, Hvar — harbour seafood, popular in June <span class="priority soon">Soon</span></div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Nautika, Dubrovnik — classic seafood, book ahead <span class="priority soon">Soon</span></div>
-        </div>
-      </div>
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">🚗</span>
-          <span class="todo-cat-title">Transport & Logistics</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Car hire in Split for Jun 24 (Krka day trip) — rentalcars.com</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Airport transfer Dubrovnik Airport → Old Town (Jun 13)</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Airport transfer Split hotel → Split Airport (Jun 25, by 10:30am)</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Travel insurance covering all dates</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Check EU entry / ETIAS requirements for travel date</div>
-        </div>
-      </div>
-
-      <div class="todo-category">
-        <div class="todo-cat-header">
-          <span class="todo-cat-icon">📦</span>
-          <span class="todo-cat-title">Packing Essentials</span>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Water shoes — most Croatian beaches are pebble or rock</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">High-factor suncream — June is very sunny, 28–32°C</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Light layers for evenings — can be cool on the water</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Small day bag for island walks and beach days</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Euros cash — small islands have limited ATMs</div>
-        </div>
-        <div class="todo-item" onclick="toggle(this)">
-          <div class="todo-check"></div>
-          <div class="todo-text">Download Jadrolinija app for ferry tickets on phone</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ────── BUDGET ────── -->
-<section>
-  <div class="container">
-    <p class="section-label">Finances</p>
-    <h2 class="section-title">Estimated Budget<br><small style="font-size:0.55em;font-weight:300;color:var(--text-light)">2 people · 12 nights</small></h2>
-
-    <div class="budget-grid">
-      <div class="budget-item">
-        <div class="budget-cat">Hotels</div>
-        <div class="budget-amount">€2,400</div>
-        <div class="budget-note">12 nights avg €200/night</div>
-      </div>
-      <div class="budget-item">
-        <div class="budget-cat">Ferries</div>
-        <div class="budget-amount">€150</div>
-        <div class="budget-note">All island hops, both passengers</div>
-      </div>
-      <div class="budget-item">
-        <div class="budget-cat">Dining Out</div>
-        <div class="budget-amount">€1,000</div>
-        <div class="budget-note">All meals, avg €60–80/day for 2</div>
-      </div>
-      <div class="budget-item">
-        <div class="budget-cat">Activities</div>
-        <div class="budget-amount">€350</div>
-        <div class="budget-note">Blue Cave, NPs, day boat hire</div>
-      </div>
-      <div class="budget-item">
-        <div class="budget-cat">Car Hire</div>
-        <div class="budget-amount">€100</div>
-        <div class="budget-note">2 days (Split for Krka)</div>
-      </div>
-      <div class="budget-item total">
-        <div class="budget-cat">Total Estimate</div>
-        <div class="budget-amount">~€4,000</div>
-        <div class="budget-note">Excl. flights & personal spend</div>
+        <div class="tags"><span class="tag">✈️ Two arrivals</span><span class="tag">🏰 Old Town</span></div>
       </div>
     </div>
-  </div>
+
+    <!-- DAY 2 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Sun</div><div class="day-num">14</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Elaphite Islands<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Private speedboat charter</small></div>
+          <span class="card-badge day-trip">Full Day</span>
+        </div>
+        <p class="card-desc">Private speedboat with captain — just the 4 of you, no schedule, no other tourists. Three islands: Koločep (first swim), Lopud (Šunj sandy beach — the only sandy beach near Dubrovnik, very shallow and safe for kids), and Šipan (lush island, old noble villas, secluded cove). Back to Dubrovnik by 17:00 for sunset drinks at Buža Bar.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">⛵ Islands</div>
+            <ul><li>Koločep — crystal clear bay, first swim ~09:30</li><li>Lopud — Šunj sandy beach, lunch at Konoba Peggy ~11:00</li><li>Šipan — secluded noble villas, final swim ~14:30</li><li>Back Dubrovnik ~17:00</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍽️ Evening</div>
+            <ul><li>Sunset drinks at Buža Bar ~19:30</li><li>Dinner at Restaurant 360° or Nautika — book ahead!</li></ul>
+          </div>
+        </div>
+        <div class="note-block">💡 <strong>Book now:</strong> Search "private boat Elaphite Islands Dubrovnik" on Viator or GetYourGuide. Budget ~€350–450 for the whole boat. This is Chris's perfect day — sun, boat, cold wine, zero effort.</div>
+        <div class="tags"><span class="tag">⛵ Private charter</span><span class="tag">🏊 Swimming</span><span class="tag">🍷 Sunset cocktails</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Mon</div><div class="day-num">15</div></div>
+      <div class="day-card transit">
+        <div class="card-header">
+          <div class="card-location">Dubrovnik → Split<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">City Walls · Krilo 15:30</small></div>
+          <span class="card-badge transit">Transit</span>
+        </div>
+        <p class="card-desc">Check out by 10:00. City Walls at 8am sharp — before the cruise ship crowds. 1,940m of ramparts with extraordinary views, ~90 min. Morning in the Old Town, last Stradun lunch, then board Krilo at Gruž harbour at 15:30 for the scenic 4.5-hour journey to Split.</p>
+        <div class="ferry-block">
+          <div class="ferry-icon">⛴️</div>
+          <div class="ferry-info">
+            <div class="ferry-route">Dubrovnik (Gruž) → Split ✓ Tickets confirmed</div>
+            <div class="ferry-detail">Krilo · Receipt 6339-15-1 · <strong>Departs 15:30 · Arrives Split 20:00</strong> · 4 tickets · Ticket nos: 3EEA00GR00B/C/D/E · €200 paid · Max luggage 23kg</div>
+          </div>
+        </div>
+        <div class="warn-block">⚠️ <strong>Important:</strong> Gruž harbour (ferry port) is NOT the Old Town port — allow 15 min by taxi. Leave Old Town by 14:45 at the latest.</div>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🏰 Morning</div>
+            <ul><li>City Walls 08:00 — pre-book at visitdubrovnik.hr</li><li>Rector's Palace, Sponza Palace</li><li>Last coffee on the Stradun</li><li>Lunch ~12:30</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍽️ On arrival Split</div>
+            <ul><li>Arrive Split 20:00 — late dinner</li><li>Zoi Split or any waterfront terrace</li><li>Keep it simple — it's late</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">🏰 City Walls</span><span class="tag">⛴️ Krilo ferry</span><span class="tag">🌊 Scenic route</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Tue</div><div class="day-num">16</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Split<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Relaxed exploration day</small></div>
+          <span class="card-badge">3 Nights</span>
+        </div>
+        <p class="card-desc">No rush today — slow breakfast, then Diocletian's Palace. People actually live, eat and drink inside a 1,700-year-old Roman emperor's palace. Wander the marble alleyways, basement halls, climb the bell tower. Afternoon at Bačvice beach — famous for the local game of picigin, the kids will want to join in. Evening wine at Uje Oil Bar inside the palace walls.</p>
+        <div class="hotel-block">
+          <div class="hotel-confirmed">✓ Confirmed — Marriott refs: #79022233 &amp; #79017740</div>
+          <div class="hotel-label">🏨 Hotel</div>
+          <div class="hotel-name">Le Méridien Lav, Split</div>
+          <div class="hotel-desc">Full resort on the Adriatic coast, 5 miles south of Split. Private beach, pools, spa. Two rooms: Room 1 — 2 Twin + Balcony (1 adult + 1 child) · Room 2 — King + sofa bed + Balcony (1 adult + 1 child).</div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item"><strong>Check-in:</strong> Mon 15 Jun</div>
+            <div class="hotel-meta-item"><strong>Check-out:</strong> Thu 18 Jun</div>
+            <div class="hotel-meta-item"><strong>Rate:</strong> €397/night/room</div>
+            <div class="hotel-meta-item"><strong>Free cancel:</strong> until Jun 13</div>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🏛️ Must-see</div>
+            <ul><li>Diocletian's Palace — basement halls + bell tower</li><li>Cathedral of St. Domnius</li><li>Riva waterfront promenade</li><li>Marjan Hill hike (Delphine + kids; Chris waits at café)</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍽️ Restaurants</div>
+            <ul><li>Bokeria — creative Croatian cuisine</li><li>Konoba Matejuška — local fish harbour spot</li><li>Uje Oil Bar — wine cave inside the palace</li><li>Bačvice beach bar — afternoon drinks</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">🏛️ Diocletian's Palace</span><span class="tag">🏖️ Bačvice beach</span><span class="tag">🍷 Palace wine bar</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Wed</div><div class="day-num">17</div></div>
+      <div class="day-card nature">
+        <div class="card-header">
+          <div class="card-location">Krka National Park<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Skradinski Buk waterfalls</small></div>
+          <span class="card-badge nature">Full Day</span>
+        </div>
+        <p class="card-desc">The best activity of the Split days and Jeremy's highlight of the whole trip. Spectacular travertine waterfalls connected by wooden boardwalks through forest. Swimming at the base of the falls in crystal-clear turquoise water. Boat from Skradin makes the arrival scenic and fun. Back via Trogir (UNESCO medieval island town, 30 min detour, worth it).</p>
+        <div class="hotel-block" style="background:linear-gradient(135deg,#eaf5ee,#e0f0e8);border-color:#9fd4b0;">
+          <div class="hotel-confirmed" style="background:#d4edda;color:#2e7a4f;">✓ Tickets confirmed — Booking ref: 1084/NPKRKA/101</div>
+          <div class="hotel-label" style="color:#2e7a4f;">🎟️ Krka National Park Tickets</div>
+          <div class="hotel-name" style="font-size:16px;">Skradin entrance · by boat · 17 June 2026</div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item"><strong>Entry:</strong> 09:00 — Skradin ULAZ Brod</div>
+            <div class="hotel-meta-item"><strong>Exit:</strong> 13:30 — Skradin IZLAZ Brod</div>
+            <div class="hotel-meta-item"><strong>Tickets:</strong> 2× adult (€40) + 2× child 7–18 (€15)</div>
+            <div class="hotel-meta-item"><strong>Total paid:</strong> €110</div>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">📍 Plan</div>
+            <ul><li>Depart Le Méridien ~07:30 by rental car</li><li>Arrive Skradin ~08:45, board boat at 09:00</li><li>At waterfall by 09:30 — before the crowds</li><li>4 hours at park, swim, explore boardwalks</li><li>Exit boat 13:30 → drive to Trogir ~14:30</li><li>Back at hotel ~17:00</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">⚠️ Notes</div>
+            <ul><li>Book rental car at Le Méridien desk or rentalcars.com</li><li>Water shoes essential — boardwalks slippery</li><li>Bring swimwear, sunscreen, snacks</li><li>Jeremy will be in his element here</li><li>Stop at Trogir on the way back — 45 min, great ice cream</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">💧 Waterfalls</span><span class="tag">🏊 Swimming</span><span class="tag">🏛️ Trogir UNESCO</span><span class="tag">🎟️ Tickets confirmed</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Thu</div><div class="day-num">18</div></div>
+      <div class="day-card transit">
+        <div class="card-header">
+          <div class="card-location">Split → Hvar<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Krilo 08:00 · Amfora resort</small></div>
+          <span class="card-badge transit">Transit + 3 Nights</span>
+        </div>
+        <p class="card-desc">Early breakfast, check out by 07:30. Board Krilo at 08:00 — arrive Hvar Town at 09:10. Check in to Amfora (rooms from 15:00, store bags on arrival). Morning exploring the harbour and Old Town, climb the Španjola Fortress for the best view in Dalmatia. Afternoon at the Amfora beach club.</p>
+        <div class="ferry-block" style="border-color:#f0c8b0;background:linear-gradient(135deg,#fdf0eb,#fae0d5);">
+          <div class="ferry-icon">⚠️</div>
+          <div class="ferry-info">
+            <div class="ferry-route" style="color:var(--terracotta);">Split → Hvar · Tickets booked but DATE WRONG</div>
+            <div class="ferry-detail">Receipt 6342-15-1 · 4 tickets · Currently booked for <strong>18 May 2026</strong> — needs to be <strong>18 June 2026, 08:00 → 09:10</strong> · Customer support contacted · Awaiting correction</div>
+          </div>
+        </div>
+        <div class="hotel-block">
+          <div class="hotel-confirmed">✓ Confirmed — Booking.com ref: 5006156318 · PIN: 7983</div>
+          <div class="hotel-label">🏨 Hotel</div>
+          <div class="hotel-name">Amfora Hvar Grand Beach Resort</div>
+          <div class="hotel-desc">Ulica biskupa Jurja Dubokovića 5, Hvar. Cascading pool with beach access, 4 restaurants, spa. 1 Family Room — 2 adults + 2 children (11 &amp; 13). Breakfast included.</div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item"><strong>Check-in:</strong> Thu 18 Jun · 15:00–23:00</div>
+            <div class="hotel-meta-item"><strong>Check-out:</strong> Sun 21 Jun · by 11:00</div>
+            <div class="hotel-meta-item"><strong>Total:</strong> €1,741 (pay at hotel)</div>
+            <div class="hotel-meta-item"><strong>Free cancel:</strong> until 15 Jun</div>
+            <div class="hotel-meta-item"><strong>Phone:</strong> +385 21 750 555</div>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🌺 Day activities</div>
+            <ul><li>Španjola Fortress — 20 min hike, panoramic views</li><li>St. Stephen's Square — most beautiful harbour in Dalmatia</li><li>Water taxi to Pakleni Islands — secluded coves</li><li>Hula Hula beach bar — sunset cocktails, go by 19:00</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍽️ Restaurants</div>
+            <ul><li>Gariful — iconic waterfront seafood</li><li>Dalmatino — Dalmatian small plates + wine</li><li>Mizarola — creative seasonal menu</li><li>Konoba Menego — local favourite</li></ul>
+          </div>
+        </div>
+        <div class="warn-block">⚠️ <strong>Book Blue Cave private speedboat NOW for tomorrow (Jun 19).</strong> This is the most important remaining booking. Ask Amfora concierge or search Viator/GetYourGuide. Budget €400–600 for a private boat for 4. Depart 07:30–08:00 to beat the group tours.</div>
+        <div class="tags"><span class="tag">🏰 Spanish Fortress</span><span class="tag">🏝️ Pakleni Islands</span><span class="tag">🌅 Hula Hula sunset</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Fri</div><div class="day-num">19</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Blue Cave + Vis Island<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">The best day of the trip</small></div>
+          <span class="card-badge">Full Day</span>
+        </div>
+        <p class="card-desc">Private speedboat from 07:30 — just the 4 of you with a captain. Green Cave on Ravnik (swim in emerald light), Blue Cave on Biševo (electric blue light, unmissable), Stiniva Cove on Vis (voted best beach in Europe, accessible only by sea), Komiža fishing village for lunch, Pakleni Islands on the return. Back in Hvar by 17:00.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🗓️ The route</div>
+            <ul><li>07:30 — Depart Hvar harbour</li><li>08:30 — Green Cave, Ravnik island</li><li>09:30 — Blue Cave, Biševo — cash €24/adult, €12/child</li><li>11:00 — Stiniva Cove — swim in the hidden lagoon</li><li>12:30 — Komiža, Vis — lunch (Konoba Bako)</li><li>14:30 — Pakleni Islands, swim at Palmižana</li><li>17:00 — Back in Hvar</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">⚠️ Notes</div>
+            <ul><li>Bring cash: €72 total cave fees (2×€24 + 2×€12)</li><li>Water shoes essential for Stiniva pebbles</li><li>Blue Cave can close in rough seas — captain will reroute</li><li>Josko on Tripadvisor is highly recommended for families</li><li>This is the single best day of the whole trip</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">🔵 Blue Cave</span><span class="tag">🟢 Green Cave</span><span class="tag">🏖️ Stiniva Cove</span><span class="tag">🎬 Mamma Mia 2 location</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Sat</div><div class="day-num">20</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Hvar — Relax day<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">No agenda. Beach, pool, food.</small></div>
+          <span class="card-badge">Rest Day</span>
+        </div>
+        <p class="card-desc">No alarm. Slow breakfast at Amfora (included). This is Chris's day — he leads the pace. Option A: morning in Stari Grad (20 min by bus, ancient Greek town, lavender fields, completely different feel from Hvar Town). Option B: stay put at Amfora's pool and beach all day. Afternoon water taxi to Pakleni Islands or paddleboarding from the beach. Farewell dinner in Hvar tonight.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🌿 Options</div>
+            <ul><li>Morning in Stari Grad — UNESCO, quiet stone streets</li><li>Franciscan Monastery in Hvar Town — beautiful cloister</li><li>Amfora pool + beach — Chris's perfect day</li><li>Paddleboarding from beach ~€15/hour</li><li>Water taxi to Pakleni for secluded coves</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍷 Food &amp; drink</div>
+            <ul><li>Try Pošip white wine — grown on Hvar, exceptional</li><li>Fig Café Bar — relaxed &amp; local</li><li>Gariful for farewell Hvar dinner</li><li>Hula Hula for final Hvar sunset ~19:00</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">☀️ Beach day</span><span class="tag">🌸 Lavender fields</span><span class="tag">🏊 Pool &amp; sea</span><span class="tag">🍷 Pošip wine</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 9 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Sun</div><div class="day-num">21</div></div>
+      <div class="day-card transit">
+        <div class="card-header">
+          <div class="card-location">Hvar → Dubrovnik<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Krilo 09:00 · Sheraton</small></div>
+          <span class="card-badge transit">Transit + 4 Nights</span>
+        </div>
+        <p class="card-desc">Check out by 11:00. Board Krilo at 09:00 — the ferry passes Korčula, Mljet and arrives Dubrovnik at 12:30. Taxi to the Sheraton Dubrovnik Riviera (~20 min from Gruž port). Arrive early afternoon — check in, pool, first relaxed evening of the final chapter of the trip.</p>
+        <div class="ferry-block">
+          <div class="ferry-icon">⛴️</div>
+          <div class="ferry-info">
+            <div class="ferry-route">Hvar (Main pier) → Dubrovnik ✓ Tickets confirmed</div>
+            <div class="ferry-detail">Krilo · Receipt 6340-15-1 · <strong>Departs Hvar 09:10 · Arrives Dubrovnik 12:30</strong> · 4 tickets · Ticket nos: 3EG80251005/1006/1007/1008 · €200 paid · Max luggage 23kg · ⚠️ Minor delays possible at Hvar due to port authority speed restrictions</div>
+          </div>
+        </div>
+        <div class="hotel-block">
+          <div class="hotel-confirmed">✓ Confirmed — Marriott refs: #79109971 &amp; #79114016</div>
+          <div class="hotel-label">🏨 Hotel</div>
+          <div class="hotel-name">Sheraton Dubrovnik Riviera</div>
+          <div class="hotel-desc">Srebreno, ~12km southeast of Dubrovnik. Full resort on the Adriatic coast — private beach, pools, spa, multiple restaurants. Room 1: King, Partial sea view, Corner room, Balcony. Room 2: King, Courtyard view, Balcony.</div>
+          <div class="hotel-meta">
+            <div class="hotel-meta-item"><strong>Check-in:</strong> Sun 21 Jun</div>
+            <div class="hotel-meta-item"><strong>Check-out:</strong> Thu 25 Jun (morning)</div>
+            <div class="hotel-meta-item"><strong>Room 1:</strong> 4 nights × €615.60 = €2,462</div>
+            <div class="hotel-meta-item"><strong>Room 2:</strong> 4 nights × €461.70 = €1,847</div>
+            <div class="hotel-meta-item"><strong>Total:</strong> €4,309 · pay at hotel</div>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">⛴️ Scenic ferry</span><span class="tag">🏖️ Resort arrival</span><span class="tag">🌊 Dubrovnik Riviera</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 10 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Mon</div><div class="day-num">22</div></div>
+      <div class="day-card day-trip">
+        <div class="card-header">
+          <div class="card-location">Montenegro — Kotor<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Day trip from Sheraton</small></div>
+          <span class="card-badge day-trip">Day Trip</span>
+        </div>
+        <p class="card-desc">The most underrated day of the trip. Drive 1.5 hours to the Bay of Kotor — a UNESCO fjord-like bay ringed by dramatic mountains, one of the most beautiful landscapes in Europe. Kotor's medieval Old Town is smaller and less crowded than Dubrovnik. Delphine and the kids explore the city walls, Chris finds a waterfront café. Lunch in the old town, back at the Sheraton for a swim by 18:00.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">📍 Montenegro</div>
+            <ul><li>Drive from Sheraton ~1.5 hours (hire car or private driver)</li><li>Kotor Old Town — UNESCO walled city</li><li>City walls hike — Delphine + kids (Chris waits below)</li><li>Perast village + Our Lady of the Rocks island (en route)</li><li>Seafood lunch in Kotor old town</li><li>Back at Sheraton by 18:00</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">⚠️ Notes</div>
+            <ul><li>Bring passports — you cross the border into Montenegro</li><li>No visa needed for EU citizens</li><li>Montenegro uses Euro (€)</li><li>Private driver makes it much easier than self-driving</li><li>Book driver through Sheraton concierge</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">🇲🇪 Montenegro</span><span class="tag">🏰 UNESCO Kotor</span><span class="tag">⛰️ Bay of Kotor</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 11 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Tue</div><div class="day-num">23</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Sheraton — Pure resort day<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Pool · Beach · Spa · Nothing</small></div>
+          <span class="card-badge">Rest Day</span>
+        </div>
+        <p class="card-desc">The last full day. Absolutely nothing mandatory. Pool in the morning, beach in the afternoon, spa for Delphine, sun lounger and cold beer for Chris. The kids have the sea, the pool, paddleboards. Option: afternoon taxi into Dubrovnik Old Town for one last wander — no luggage, no agenda, just enjoying the city you know now. Evening farewell dinner at the Sheraton or a final restaurant in the Dubrovnik area.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🏖️ Resort</div>
+            <ul><li>Morning swim — pool or private beach</li><li>Sheraton spa for Delphine</li><li>Sun lounger day for Chris</li><li>Paddleboards and kayaks for kids</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🌆 Optional</div>
+            <ul><li>Afternoon taxi to Dubrovnik Old Town (~30 min)</li><li>Final walk on the Stradun</li><li>Sunset at Buža Bar one more time</li><li>Farewell dinner at Restaurant 360° or Proto</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">☀️ Full resort day</span><span class="tag">💆 Spa</span><span class="tag">🌅 Final Dubrovnik sunset</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 12 -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Wed</div><div class="day-num">24</div></div>
+      <div class="day-card">
+        <div class="card-header">
+          <div class="card-location">Sheraton — Last full day<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">Pool · Dubrovnik · Pack</small></div>
+          <span class="card-badge">Last Full Day</span>
+        </div>
+        <p class="card-desc">The last day. No agenda whatsoever. Morning at the Sheraton pool and beach — Chris on a sun lounger, kids in the sea, Delphine at the spa. Optional afternoon taxi into Dubrovnik Old Town for one last walk on the Stradun — no luggage, no rush, just enjoying a city you now know. Back for a farewell dinner at the Sheraton. Pack tonight — early departure tomorrow.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">🏖️ Morning &amp; afternoon</div>
+            <ul><li>Pool and private beach at Sheraton — pure relaxation</li><li>Spa for Delphine</li><li>Paddleboards and kayaks for kids</li><li>Optional: taxi to Dubrovnik Old Town ~30 min — last Stradun stroll</li><li>Sunset at Buža Bar one final time</li></ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🍽️ Evening</div>
+            <ul><li>Farewell dinner at the Sheraton restaurant</li><li>Or final splurge at Restaurant 360° or Nautika in Dubrovnik</li><li>Pack bags tonight — taxi leaves early tomorrow</li><li>Set alarms — both flights depart ~13:00</li></ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">☀️ Last beach day</span><span class="tag">🌅 Final sunset</span><span class="tag">🇭🇷 Hvala Croatia!</span></div>
+      </div>
+    </div>
+
+    <!-- DAY 13 — DEPARTURE -->
+    <div class="day-block">
+      <div class="day-meta"><div class="day-date">Thu</div><div class="day-num">25</div></div>
+      <div class="day-card departure">
+        <div class="card-header">
+          <div class="card-location">Fly home from Dubrovnik<br><small style="font-size:14px;font-weight:300;color:var(--text-light)">DBV 13:00 / 13:10 — separate flights</small></div>
+          <span class="card-badge departure">Departure Day</span>
+        </div>
+        <p class="card-desc">Check out of Sheraton. Both families fly from Dubrovnik airport within 10 minutes of each other — Delphine, Emily &amp; Jeremy at 13:00, Chris at 13:10. Be at the airport by 11:00. Sheraton to DBV airport is ~25 minutes by taxi.</p>
+        <div class="card-grid">
+          <div class="card-section">
+            <div class="card-section-title">✈️ Flights</div>
+            <ul>
+              <li>Delphine, Emily &amp; Jeremy: OS624 DBV 13:00 → VIE 14:20</li>
+              <li>then OS295 VIE 15:00 → BRU 16:45 · ref 9J2BDV</li>
+              <li>Chris: ZCOOWL DBV 13:10 → ZRH → LUX · arrives 18:35</li>
+              <li>All at airport by 11:00 · check-in closes ~12:00</li>
+            </ul>
+          </div>
+          <div class="card-section">
+            <div class="card-section-title">🚖 Morning timeline</div>
+            <ul>
+              <li>08:30 — Breakfast at Sheraton</li>
+              <li>09:30 — Check out</li>
+              <li>10:00 — Taxi to DBV airport (~25 min)</li>
+              <li>10:30 — At airport · check in · last coffee</li>
+              <li>13:00/13:10 — Wheels up 🛫</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tags"><span class="tag">✈️ OS624 DBV 13:00</span><span class="tag">✈️ ZCOOWL DBV 13:10</span></div>
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+</div>
 </section>
+</div>
 
-<!-- ────── TIPS ────── -->
-<section style="background:white;padding:60px 0;">
-  <div class="container">
-    <p class="section-label">Before You Go</p>
-    <h2 class="section-title">Essential Tips</h2>
+<!-- ═══════════════ CHECKLIST ═══════════════ -->
+<div id="tab-checklist" class="tab-section">
+<section class="checklist-section">
+<div class="container">
+  <p class="section-label">Booking Checklist</p>
+  <h2 class="section-title">Everything to Book</h2>
+  <p class="checklist-intro">Tap each item to check it off. Items marked DONE are already confirmed. URGENT = book today.</p>
+  <div class="checklist-grid">
 
-    <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-icon">⛴️</div>
-        <div class="tip-title">Book Ferries Now</div>
-        <div class="tip-text">Route 659 (Split–Bol–Hvar–Vis) is brand new for 2026 and very popular. Book all legs on jadrolinija.hr as soon as possible. Tickets open now. You can also use the Jadrolinija app.</div>
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">✈️</span><span class="cat-title">Flights</span></div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Delphine + kids: BRU→DBV SN3351 · 13 Jun · ref 9J2BDV <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🏰</div>
-        <div class="tip-title">Dubrovnik Walls — Go Early</div>
-        <div class="tip-text">By 10am the walls are packed with cruise ship passengers. Go at 8am when they open — you'll practically have them to yourself. Pre-book online at visitdubrovnik.hr.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Chris: LUX→DBV LG415 · 13 Jun · ref 9IZJLZ <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🔵</div>
-        <div class="tip-title">Blue Cave — Book via Concierge</div>
-        <div class="tip-text">The Blue Cave (Biševo island) fills up with tour boats by 9am in June. Book through your Vis hotel concierge for an early start. The cave glows most intensely around 11am–noon.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Delphine + kids: DBV→VIE→BRU OS624+OS295 · 25 Jun · ref 9J2BDV <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🍽️</div>
-        <div class="tip-title">Konoba Roki's on Vis</div>
-        <div class="tip-text">This legendary restaurant in Milna serves lamb cooked under the peka (traditional metal dome) — it requires advance notice of 24+ hours to prepare. Book ahead or you'll miss it. Widely considered one of the best meals in Croatia.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Chris: DBV→ZRH→LUX · 25 Jun · ref ZCOOWL <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">💶</div>
-        <div class="tip-title">Bring Cash for Smaller Islands</div>
-        <div class="tip-text">Vis especially has limited ATMs and some smaller restaurants and boat operators prefer cash. Bring euros from Split. Croatia uses the Euro (€) since 2023.</div>
+    </div>
+
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">🏨</span><span class="cat-title">Hotels</span></div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">La Vita e Bella VI, Dubrovnik · Jun 13–15 · ref 6026391745 <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🌡️</div>
-        <div class="tip-title">June Weather</div>
-        <div class="tip-text">Expect 26–30°C, 10+ hours of sunshine, very little rain. The sea will be around 22°C — warm enough for swimming. Evenings are pleasant (18–22°C). Bring a light layer for after sunset on the water.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Le Méridien Lav, Split · Jun 15–18 · refs #79022233 &amp; #79017740 <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🏖️</div>
-        <div class="tip-title">Zlatni Rat — Arrive Early</div>
-        <div class="tip-text">Croatia's most famous beach gets very busy by 11am in June. Head down by 9am to claim a good spot near the tip of the spit. The beach changes shape with the current — enjoy the phenomenon.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Amfora Hvar Grand Beach Resort · Jun 18–21 · ref 5006156318 <span class="priority done">Done</span></div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">🏞️</div>
-        <div class="tip-title">Krka National Park</div>
-        <div class="tip-text">Pre-book tickets at npkrka.hr and arrive by 9am. The park gets very crowded from 10am with tour groups. Drive from Split takes 1h 20min — head straight to Skradinski Buk entrance at Lozovac.</div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Sheraton Dubrovnik Riviera · Jun 21–25 · 2 rooms · refs #79109971 &amp; #79114016 <span class="priority done">Done</span></div>
+      </div>
+    </div>
+
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">⛴️</span><span class="cat-title">Ferries</span></div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Krilo: Dubrovnik → Split · Jun 15 · 15:30 · receipt 6339-15-1 · 4 tickets <span class="priority done">Done</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Krilo: Split → Hvar · Jun 18 · receipt 6342-15-1 · <strong>⚠️ Booked for May 18 — awaiting date correction from Krilo support</strong> <span class="priority urgent">Fix pending</span></div>
+      </div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Krilo: Hvar → Dubrovnik · Jun 21 · 09:10 · receipt 6340-15-1 · 4 tickets <span class="priority done">Done</span></div>
+      </div>
+    </div>
+
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">🎟️</span><span class="cat-title">Activities</span></div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Dubrovnik City Walls · Jun 15 · 08:00 · visitdubrovnik.hr <span class="priority urgent">Urgent</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Elaphite Islands private speedboat · Jun 14 · Viator/GetYourGuide <span class="priority urgent">Urgent</span></div>
+      </div>
+      <div class="check-item checked" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Krka National Park tickets · Jun 17 · 09:00 · ref 1084/NPKRKA/101 <span class="priority done">Done</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Blue Cave private speedboat · Jun 19 · depart 07:30 · Amfora concierge or Viator <span class="priority urgent">Urgent</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Montenegro/Kotor private driver · Jun 22 · via Sheraton concierge <span class="priority soon">Soon</span></div>
+      </div>
+    </div>
+
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">🍽️</span><span class="cat-title">Restaurants</span></div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Restaurant 360°, Dubrovnik — essential to book ahead <span class="priority urgent">Urgent</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Nautika, Dubrovnik — classic seafood, book ahead <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Gariful, Hvar — harbour seafood, popular in June <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Mizarola, Hvar — creative seasonal menu, book ahead <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Konoba Bako, Komiža (Vis) — lunch on Blue Cave day <span class="priority soon">Soon</span></div>
+      </div>
+    </div>
+
+    <div class="checklist-cat">
+      <div class="cat-header"><span class="cat-icon">🚗</span><span class="cat-title">Transport</span></div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Rental car Split for Jun 17 Krka day trip — rentalcars.com <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Airport transfer DBV → La Vita e Bella · Jun 13 <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Sheraton → Dubrovnik Airport taxi · Jun 25 · by 10:30 <span class="priority soon">Soon</span></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">Travel insurance for all 4, all dates <span class="priority soon">Soon</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ═══════════════ MAP ═══════════════ -->
+<div id="tab-map" class="tab-section">
+<section class="map-section">
+<div class="container">
+  <p class="section-label">Getting Around</p>
+  <h2 class="section-title">Trip Map</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=15.8%2C42.3%2C18.5%2C43.5&layer=mapnik&marker=42.6507%2C18.0944"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+  <div class="stops-grid">
+    <div class="stop-card">
+      <div class="stop-num">1</div>
+      <div class="stop-name">🏰 Dubrovnik</div>
+      <div class="stop-dates">Jun 13–15 · 2 nights</div>
+      <div class="stop-desc">La Vita e Bella VI, Old Town. Elaphites charter + City Walls.</div>
+    </div>
+    <div class="stop-card">
+      <div class="stop-num">2</div>
+      <div class="stop-name">🏛️ Split</div>
+      <div class="stop-dates">Jun 15–18 · 3 nights</div>
+      <div class="stop-desc">Le Méridien Lav. Diocletian's Palace + Krka waterfalls.</div>
+    </div>
+    <div class="stop-card">
+      <div class="stop-num">3</div>
+      <div class="stop-name">🌺 Hvar</div>
+      <div class="stop-dates">Jun 18–21 · 3 nights</div>
+      <div class="stop-desc">Amfora resort. Blue Cave + Vis day trip.</div>
+    </div>
+    <div class="stop-card">
+      <div class="stop-num">4</div>
+      <div class="stop-name">🌊 Sheraton Riviera</div>
+      <div class="stop-dates">Jun 21–25 · 4 nights</div>
+      <div class="stop-desc">Dubrovnik Riviera. Montenegro day trip + resort days.</div>
+    </div>
+    <div class="stop-card" style="border-left-color:var(--dusk)">
+      <div class="stop-num" style="color:var(--dusk)">🔵</div>
+      <div class="stop-name">Blue Cave (Biševo)</div>
+      <div class="stop-dates">Jun 19 · Day trip from Hvar</div>
+      <div class="stop-desc">Private speedboat. Blue Cave + Green Cave + Vis + Stiniva.</div>
+    </div>
+    <div class="stop-card" style="border-left-color:var(--green)">
+      <div class="stop-num" style="color:var(--green)">💧</div>
+      <div class="stop-name">Krka National Park</div>
+      <div class="stop-dates">Jun 17 · Day trip from Split</div>
+      <div class="stop-desc">Skradin boat 09:00. Waterfall swimming. Trogir on return.</div>
+    </div>
+  </div>
+  <div style="margin-top:24px;padding:16px;background:var(--sand);border-radius:10px;font-size:13px;color:var(--text-mid);">
+    🗺️ <strong>Full interactive map:</strong> <a href="https://www.openstreetmap.org/?mlat=43.0&mlon=16.5#map=8/43.0/16.5" target="_blank" class="ext">Open in OpenStreetMap ↗</a> · All stops: Dubrovnik (42.65°N, 18.09°E) → Split (43.51°N, 16.44°E) → Hvar (43.17°N, 16.44°E) → Biševo Blue Cave (42.99°N, 16.01°E) → Dubrovnik Riviera
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ═══════════════ CALENDAR ═══════════════ -->
+<div id="tab-calendar" class="tab-section">
+<section class="calendar-section">
+<div class="container">
+  <p class="section-label">June 2026</p>
+  <h2 class="section-title">Trip Calendar</h2>
+  <div class="cal-grid">
+    <div class="cal-header">Mon</div><div class="cal-header">Tue</div><div class="cal-header">Wed</div>
+    <div class="cal-header">Thu</div><div class="cal-header">Fri</div><div class="cal-header">Sat</div><div class="cal-header">Sun</div>
+    <!-- Week 1 -->
+    <div class="cal-day other-month"><div class="cal-date">1</div></div>
+    <div class="cal-day other-month"><div class="cal-date">2</div></div>
+    <div class="cal-day other-month"><div class="cal-date">3</div></div>
+    <div class="cal-day other-month"><div class="cal-date">4</div></div>
+    <div class="cal-day other-month"><div class="cal-date">5</div></div>
+    <div class="cal-day other-month"><div class="cal-date">6</div></div>
+    <div class="cal-day other-month"><div class="cal-date">7</div></div>
+    <!-- Week 2 -->
+    <div class="cal-day other-month"><div class="cal-date">8</div></div>
+    <div class="cal-day other-month"><div class="cal-date">9</div></div>
+    <div class="cal-day other-month"><div class="cal-date">10</div></div>
+    <div class="cal-day other-month"><div class="cal-date">11</div></div>
+    <div class="cal-day other-month"><div class="cal-date">12</div></div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">13</div>
+      <div class="cal-event flight">✈️ Arrive DBV</div>
+      <div class="cal-event hotel">La Vita e Bella</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">14</div>
+      <div class="cal-event activity">⛵ Elaphites</div>
+    </div>
+    <!-- Week 3 -->
+    <div class="cal-day trip-day">
+      <div class="cal-date">15</div>
+      <div class="cal-event activity">🏰 City Walls 8am</div>
+      <div class="cal-event travel">⛴️ Krilo 15:30→Split</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">16</div>
+      <div class="cal-event hotel">Le Méridien Lav</div>
+      <div class="cal-event activity">🏛️ Split relax</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">17</div>
+      <div class="cal-event activity">💧 Krka NP 09:00</div>
+      <div class="cal-event activity">🏛️ Trogir return</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">18</div>
+      <div class="cal-event travel">⛴️ Split→Hvar 08:00</div>
+      <div class="cal-event hotel">Amfora Resort</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">19</div>
+      <div class="cal-event activity">🔵 Blue Cave 07:30</div>
+      <div class="cal-event activity">🏖️ Vis + Stiniva</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">20</div>
+      <div class="cal-event activity">☀️ Hvar relax day</div>
+      <div class="cal-event activity">🌺 Pakleni Islands</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">21</div>
+      <div class="cal-event travel">⛴️ Hvar→DBV 09:00</div>
+      <div class="cal-event hotel">Sheraton Riviera</div>
+    </div>
+    <!-- Week 4 -->
+    <div class="cal-day trip-day">
+      <div class="cal-date">22</div>
+      <div class="cal-event activity">🇲🇪 Montenegro</div>
+      <div class="cal-event activity">🏰 Kotor Old Town</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">23</div>
+      <div class="cal-event activity">🏖️ Pure resort day</div>
+      <div class="cal-event activity">💆 Spa + pool</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">24</div>
+      <div class="cal-event activity">☀️ Last resort day</div>
+      <div class="cal-event activity">🌅 Final Dubrovnik</div>
+    </div>
+    <div class="cal-day trip-day">
+      <div class="cal-date">25</div>
+      <div class="cal-event flight">✈️ OS624 DBV 13:00</div>
+      <div class="cal-event flight">✈️ ZCOOWL 13:10</div>
+    </div>
+    <div class="cal-day other-month"><div class="cal-date">26</div></div>
+    <div class="cal-day other-month"><div class="cal-date">27</div></div>
+    <div class="cal-day other-month"><div class="cal-date">28</div></div>
+    <!-- Week 5 -->
+    <div class="cal-day other-month"><div class="cal-date">29</div></div>
+    <div class="cal-day other-month"><div class="cal-date">30</div></div>
+    <div class="cal-day other-month"><div class="cal-date">1</div></div>
+    <div class="cal-day other-month"><div class="cal-date">2</div></div>
+    <div class="cal-day other-month"><div class="cal-date">3</div></div>
+    <div class="cal-day other-month"><div class="cal-date">4</div></div>
+    <div class="cal-day other-month"><div class="cal-date">5</div></div>
+  </div>
+  <div class="cal-legend">
+    <div class="cal-leg"><div class="cal-leg-dot" style="background:#fef0d5"></div> Travel / Ferry</div>
+    <div class="cal-leg"><div class="cal-leg-dot" style="background:#e8f4f9"></div> Hotel</div>
+    <div class="cal-leg"><div class="cal-leg-dot" style="background:#eaf5ee"></div> Activity</div>
+    <div class="cal-leg"><div class="cal-leg-dot" style="background:#fdf0eb"></div> Flight</div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ═══════════════ WEATHER ═══════════════ -->
+<div id="tab-weather" class="tab-section">
+<section class="weather-section">
+<div class="container">
+  <p class="section-label">June on the Dalmatian Coast</p>
+  <h2 class="section-title">What to Expect</h2>
+  <div class="weather-grid">
+    <div class="weather-card">
+      <div class="weather-header dubrovnik">
+        <div class="weather-place">Dubrovnik</div>
+        <div class="weather-dates">Jun 13–15 &amp; Jun 21–25</div>
+        <div class="weather-temp">28<span>°C</span></div>
+      </div>
+      <div class="weather-body">
+        <div class="weather-row"><span>Daytime high</span><strong>27–30°C</strong></div>
+        <div class="weather-row"><span>Night low</span><strong>21–23°C</strong></div>
+        <div class="weather-row"><span>Sea temperature</span><strong>~22°C</strong></div>
+        <div class="weather-row"><span>Sunshine hours</span><strong>10–11 hrs/day</strong></div>
+        <div class="weather-row"><span>Rain chance</span><strong>Very low</strong></div>
+        <div class="weather-row"><span>Humidity</span><strong>Moderate</strong></div>
+        <div class="weather-tip">☀️ Perfect summer conditions. Old Town heats up midday — do the City Walls at 8am. Evenings are glorious.</div>
+      </div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-header split">
+        <div class="weather-place">Split</div>
+        <div class="weather-dates">Jun 15–18</div>
+        <div class="weather-temp">27<span>°C</span></div>
+      </div>
+      <div class="weather-body">
+        <div class="weather-row"><span>Daytime high</span><strong>26–29°C</strong></div>
+        <div class="weather-row"><span>Night low</span><strong>19–22°C</strong></div>
+        <div class="weather-row"><span>Sea temperature</span><strong>~21°C</strong></div>
+        <div class="weather-row"><span>Sunshine hours</span><strong>10 hrs/day</strong></div>
+        <div class="weather-row"><span>Rain chance</span><strong>Low</strong></div>
+        <div class="weather-tip">🏛️ Ideal sightseeing weather. Le Méridien's beach is perfect in the afternoon. Krka gorge stays cooler — wear layers in the morning.</div>
+      </div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-header hvar">
+        <div class="weather-place">Hvar</div>
+        <div class="weather-dates">Jun 18–21</div>
+        <div class="weather-temp">29<span>°C</span></div>
+      </div>
+      <div class="weather-body">
+        <div class="weather-row"><span>Daytime high</span><strong>28–31°C</strong></div>
+        <div class="weather-row"><span>Night low</span><strong>22–24°C</strong></div>
+        <div class="weather-row"><span>Sea temperature</span><strong>~23°C</strong></div>
+        <div class="weather-row"><span>Sunshine hours</span><strong>11+ hrs/day</strong></div>
+        <div class="weather-row"><span>Sunniest island</span><strong>2,726 hrs sun/year</strong></div>
+        <div class="weather-tip">🌞 Hvar is the sunniest place in Croatia. High factor sunscreen essential — especially on the Blue Cave boat day. Sea is warm and very clear.</div>
+      </div>
+    </div>
+    <div class="weather-card">
+      <div class="weather-header sheraton">
+        <div class="weather-place">Dubrovnik Riviera</div>
+        <div class="weather-dates">Jun 21–25</div>
+        <div class="weather-temp">28<span>°C</span></div>
+      </div>
+      <div class="weather-body">
+        <div class="weather-row"><span>Daytime high</span><strong>27–30°C</strong></div>
+        <div class="weather-row"><span>Night low</span><strong>20–22°C</strong></div>
+        <div class="weather-row"><span>Sea temperature</span><strong>~22°C</strong></div>
+        <div class="weather-row"><span>Montenegro</span><strong>Similar — 27°C</strong></div>
+        <div class="weather-row"><span>Evening breeze</span><strong>Pleasant ~18°C</strong></div>
+        <div class="weather-tip">🌊 Perfect resort weather for the final days. Evenings on the Sheraton terrace will be magical. Kotor Bay runs slightly cooler due to the mountains.</div>
       </div>
     </div>
   </div>
+  <div style="background:var(--sand);border-radius:16px;padding:28px 32px;margin-top:8px;">
+    <div class="section-label" style="margin-bottom:16px;">What to wear each day</div>
+    <div class="card-grid">
+      <div class="card-section">
+        <div class="card-section-title">☀️ Jun 13–21 · Dubrovnik, Split, Hvar</div>
+        <ul>
+          <li>Light t-shirts and shorts every day</li>
+          <li>A light layer for evenings &amp; boat rides — can feel cool at sea</li>
+          <li>Swimwear essential everywhere</li>
+          <li>Sun hat &amp; sunglasses — strong Adriatic sun</li>
+          <li>Water shoes for pebble beaches &amp; Stiniva</li>
+          <li>Comfortable walking shoes for Kotor walls hike</li>
+        </ul>
+      </div>
+      <div class="card-section">
+        <div class="card-section-title">🌊 Jun 21–25 · Sheraton + Montenegro</div>
+        <ul>
+          <li>Resort casual — the Sheraton has a dress code at dinner</li>
+          <li>Smart casual for Kotor old town restaurants</li>
+          <li>Bring passport for Montenegro border crossing</li>
+          <li>Comfortable shoes for Kotor city walls hike</li>
+          <li>Swimwear for final beach days at Sheraton</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="note-block" style="margin-top:20px;">📡 <strong>Live forecast not yet available for June 13–25.</strong> Check back around <strong>June 6–7</strong> for the actual 10-day forecast at <a href="https://weather.com" target="_blank" class="ext">weather.com</a> or <a href="https://www.windy.com" target="_blank" class="ext">windy.com</a> (excellent for sea conditions before the Blue Cave day).</div>
+</div>
 </section>
+</div>
 
-<!-- ────── FOOTER ────── -->
+<!-- ═══════════════ PACKING ═══════════════ -->
+<div id="tab-packing" class="tab-section">
+<section class="packing-section">
+<div class="container">
+  <p class="section-label">Don't Forget</p>
+  <h2 class="section-title">Packing List</h2>
+  <div id="pack-summary" style="background:white;border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+    <div style="flex:1">
+      <div style="font-size:13px;font-weight:600;color:var(--deep-sea);margin-bottom:6px;">Packing progress</div>
+      <div class="pack-progress-bar"><div id="pack-fill" class="pack-progress-fill" style="width:0%"></div></div>
+    </div>
+    <div id="pack-count-total" style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--azure);">0 / 0</div>
+  </div>
+  <div class="pack-grid">
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">👕</span><span class="pack-cat-name">Clothing</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Lightweight t-shirts ×5–6 <span class="essential">essential</span></div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Shorts ×3–4</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Light trousers or linen pants ×1–2 — evenings &amp; Montenegro</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Light jacket or cardigan <span class="essential">essential</span> — evening boat rides</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Swimsuits ×2 each <span class="essential">essential</span></div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Beach cover-up or sarong</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Smart casual outfit for Sheraton dinners</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Underwear &amp; socks ×7–8</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Kids: extra t-shirts ×2 — they go through them fast</div></div>
+    </div>
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">👟</span><span class="pack-cat-name">Footwear</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Water shoes <span class="essential">essential</span> — Stiniva beach is rocky, boardwalks slippery</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Comfortable walking/hiking shoes — Kotor city walls, Marjan Hill</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Sandals or flip-flops — poolside, casual evenings</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Smart shoes for Sheraton dinner (1 pair)</div></div>
+    </div>
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">🧴</span><span class="pack-cat-name">Health &amp; Toiletries</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">High-factor sunscreen SPF50 <span class="essential">essential</span> — Hvar sun is intense</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">After-sun lotion</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Lip balm with SPF</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Basic first aid kit — plasters, paracetamol, antihistamine</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Seasickness tablets — for the Krilo ferry and Blue Cave boat</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Prescription medications</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Insect repellent — light application for evenings</div></div>
+    </div>
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">🎒</span><span class="pack-cat-name">Gear &amp; Accessories</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Small daypack — for day trips, beaches, boat days</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Wide-brimmed sun hat <span class="essential">essential</span> — strong Adriatic sun</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Sunglasses — good quality, all-day wear</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Reusable water bottle — stay hydrated in the heat</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Dry bag or waterproof phone case <span class="essential">essential</span> — for boat days</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Snorkel mask &amp; fins (optional) — Blue Cave + Vis swimming</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Camera + waterproof case — Blue Cave &amp; Stiniva are extraordinary</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Power bank — long boat days drain the phone</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Phone charger + EU adapter (Croatia uses Type F)</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Kids: entertainment for ferry journeys (headphones, tablets)</div></div>
+    </div>
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">📄</span><span class="pack-cat-name">Documents &amp; Money</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Passports — all 4 <span class="essential">essential</span> — needed for Montenegro border</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">All flight confirmations — printed or on phone</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">All hotel confirmations — La Vita e Bella, Le Méridien, Amfora, Sheraton</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Krka National Park tickets PDF — ref 1084/NPKRKA/101</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Cash in Euros <span class="essential">essential</span> — Blue Cave fees €72, ferry tips, small islands</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Credit card (Visa/Mastercard) — widely accepted in Croatia</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Travel insurance documents — emergency numbers in phone</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">EHIC/European Health Insurance Card — all family members</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Download Krilo app for ferry tickets on phone</div></div>
+    </div>
+
+    <div class="pack-cat">
+      <div class="pack-cat-title"><span class="pack-cat-icon">🧒</span><span class="pack-cat-name">For Emily &amp; Jeremy</span></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Own small backpack for adventures</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Snacks for ferry journeys — Krilo rides can be 4+ hours</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Headphones + entertainment downloads</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Swimwear ×3 — constant swimming every day</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Rashguard / UV swim shirt — long days on boats in June sun</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Waterproof sandals that stay on while swimming</div></div>
+      <div class="pack-item" onclick="togglePack(this)"><div class="pack-check"></div><div class="pack-text">Travel journal — Croatia is worth remembering</div></div>
+    </div>
+
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ═══════════════ COSTS ═══════════════ -->
+<div id="tab-costs" class="tab-section">
+<section class="costs-section">
+<div class="container">
+  <p class="section-label">Finances</p>
+  <h2 class="section-title">Trip Costs</h2>
+
+  <!-- SUMMARY TOTALS ROW -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:40px;">
+    <div style="background:linear-gradient(135deg,#eaf5ee,#d4edda);border-radius:14px;padding:20px;border-top:3px solid #4a9b6f;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2e7a4f;margin-bottom:8px;">✓ Already paid</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#1a5a35;">€1,827</div>
+      <div style="font-size:11px;color:#2e7a4f;margin-top:4px;">La Vita e Bella + Krka + 2 Krilo ferries</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#f0f8fc,#e0f0f8);border-radius:14px;padding:20px;border-top:3px solid var(--azure);">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azure);margin-bottom:8px;">📋 Confirmed · pay later</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--deep-sea);">€10,832</div>
+      <div style="font-size:11px;color:var(--azure);margin-top:4px;">Le Méridien + Amfora + Sheraton</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#fef9ee,#fdf0d5);border-radius:14px;padding:20px;border-top:3px solid var(--gold);">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a07020;margin-bottom:8px;">⚡ Still to book</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--deep-sea);">~€1,650</div>
+      <div style="font-size:11px;color:#a07020;margin-top:4px;">Boats, Split→Hvar ferry, activities</div>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--deep-sea),var(--azure));border-radius:14px;padding:20px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:8px;">Total estimated</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:white;">~€14,000</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;">Excl. flights · 4 people · 12 nights</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: ALREADY PAID -->
+  <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2e7a4f;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#4a9b6f;"></span>
+    Already paid — €1,827
+  </div>
+  <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);margin-bottom:32px;">
+    <div class="cost-item" style="border-left:4px solid #4a9b6f;">
+      <div class="cost-icon">🏰</div>
+      <div class="cost-info">
+        <div class="cost-name">La Vita e Bella VI — Dubrovnik</div>
+        <div class="cost-detail">Ref: 6026391745 · PIN: 9967 · 2 Deluxe Suites · Jun 13–15 · 2 nights · 2 adults + 2 children · Paid via Booking.com (card ••••0292, charged 12 May 2026)</div>
+      </div>
+      <div class="cost-amount">€1,317</div>
+      <div class="cost-status paid">✓ Paid</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid #4a9b6f;">
+      <div class="cost-icon">💧</div>
+      <div class="cost-info">
+        <div class="cost-name">Krka National Park tickets</div>
+        <div class="cost-detail">Ref: 1084/NPKRKA/101 · Jun 17 · 09:00–13:30 Skradin boat · 2× adult €40 + 2× child €15 · Paid 24 Mar 2026 via card</div>
+      </div>
+      <div class="cost-amount">€110</div>
+      <div class="cost-status paid">✓ Paid</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid #4a9b6f;">
+      <div class="cost-icon">⛴️</div>
+      <div class="cost-info">
+        <div class="cost-name">Krilo: Dubrovnik → Split · Jun 15</div>
+        <div class="cost-detail">Receipt 6339-15-1 · 4 tickets · 15:30–20:00 · Ticket nos: 3EEA00GR00B / C / D / E · Paid 24 Mar 2026</div>
+      </div>
+      <div class="cost-amount">€200</div>
+      <div class="cost-status paid">✓ Paid</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid #4a9b6f;">
+      <div class="cost-icon">⛴️</div>
+      <div class="cost-info">
+        <div class="cost-name">Krilo: Hvar → Dubrovnik · Jun 21</div>
+        <div class="cost-detail">Receipt 6340-15-1 · 4 tickets · 09:10–12:30 · Ticket nos: 3EG80251005 / 1006 / 1007 / 1008 · Paid 24 Mar 2026</div>
+      </div>
+      <div class="cost-amount">€200</div>
+      <div class="cost-status paid">✓ Paid</div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: CONFIRMED, PAY LATER -->
+  <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--azure);margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--azure);"></span>
+    Confirmed — pay at hotel/on arrival — €10,832
+  </div>
+  <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);margin-bottom:32px;">
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">🏖️</div>
+      <div class="cost-info">
+        <div class="cost-name">Le Méridien Lav — Split</div>
+        <div class="cost-detail">Refs: #79022233 (2 Twin + Balcony, 1 adult + 1 child) &amp; #79017740 (King + sofa bed + Balcony, 1 adult + 1 child) · Jun 15–18 · 3 nights · €397/night/room · Parking €20/day · Free cancel until Jun 13</div>
+      </div>
+      <div style="text-align:right;min-width:90px;">
+        <div class="cost-amount">€2,382</div>
+        <div style="font-size:10px;color:var(--text-light);margin-top:2px;">2 rooms × 3 nights</div>
+      </div>
+      <div class="cost-status" style="background:#e8f4f9;color:var(--azure);">Pay at hotel</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">🌺</div>
+      <div class="cost-info">
+        <div class="cost-name">Amfora Hvar Grand Beach Resort</div>
+        <div class="cost-detail">Ref: 5006156318 · PIN: 7983 · 1 Family Room · Jun 18–21 · 3 nights · Breakfast included · €1,519 + €197 VAT + €24 city tax · Free cancel until Jun 15</div>
+      </div>
+      <div style="text-align:right;min-width:90px;">
+        <div class="cost-amount">€1,741</div>
+        <div style="font-size:10px;color:var(--text-light);margin-top:2px;">incl. breakfast</div>
+      </div>
+      <div class="cost-status" style="background:#e8f4f9;color:var(--azure);">Pay at hotel</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">🌊</div>
+      <div class="cost-info">
+        <div class="cost-name">Sheraton Dubrovnik Riviera — Room 1</div>
+        <div class="cost-detail">Ref: #79109971 · King, Partial sea view, Corner room, Balcony · Jun 21–25 · 4 nights × €615.60</div>
+      </div>
+      <div style="text-align:right;min-width:90px;"><div class="cost-amount">€2,462</div></div>
+      <div class="cost-status" style="background:#e8f4f9;color:var(--azure);">Pay at hotel</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">🌊</div>
+      <div class="cost-info">
+        <div class="cost-name">Sheraton Dubrovnik Riviera — Room 2</div>
+        <div class="cost-detail">Ref: #79114016 · King, Courtyard view, Balcony · Jun 21–25 · 4 nights × €461.70</div>
+      </div>
+      <div style="text-align:right;min-width:90px;"><div class="cost-amount">€1,847</div></div>
+      <div class="cost-status" style="background:#e8f4f9;color:var(--azure);">Pay at hotel</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">✈️</div>
+      <div class="cost-info">
+        <div class="cost-name">Flights — all 4 passengers</div>
+        <div class="cost-detail">Delphine + kids: SN3351 BRU→DBV + OS624+OS295 DBV→VIE→BRU · ref 9J2BDV · Chris: LG415 LUX→DBV + ZCOOWL DBV→ZRH→LUX · refs 9IZJLZ / ZCOOWL</div>
+      </div>
+      <div style="text-align:right;min-width:90px;"><div class="cost-amount" style="font-size:16px;">Already paid</div></div>
+      <div class="cost-status paid">✓ Confirmed</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--azure);">
+      <div class="cost-icon">🔵</div>
+      <div class="cost-info">
+        <div class="cost-name">Blue Cave — cash entry on the day</div>
+        <div class="cost-detail">Biševo island · Jun 19 · 2× adult €24 + 2× child €12 · Cash only at cave entrance · Bring exact amount</div>
+      </div>
+      <div class="cost-amount">€72</div>
+      <div class="cost-status" style="background:#fef6e4;color:#a07020;">Bring cash</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: STILL TO BOOK -->
+  <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#a07020;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);"></span>
+    Still to book — ~€1,650
+  </div>
+  <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);margin-bottom:32px;">
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">⛵</div>
+      <div class="cost-info">
+        <div class="cost-name">Elaphite Islands private speedboat — Jun 14 <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(196,96,42,.15);color:var(--terracotta);padding:2px 6px;border-radius:4px;margin-left:4px;">⚡ Urgent</span></div>
+        <div class="cost-detail">Full day · 4 people · depart 09:00 from Dubrovnik Old Port · Koločep + Lopud + Šipan · Viator or GetYourGuide</div>
+      </div>
+      <div class="cost-amount">~€400</div>
+      <div class="cost-status pending">Book now</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">🔵</div>
+      <div class="cost-info">
+        <div class="cost-name">Blue Cave + Vis private speedboat — Jun 19 <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(196,96,42,.15);color:var(--terracotta);padding:2px 6px;border-radius:4px;margin-left:4px;">⚡ Urgent</span></div>
+        <div class="cost-detail">Full day · 4 people · depart 07:30 · Green Cave + Blue Cave + Stiniva + Vis + Pakleni · Amfora concierge or Viator · cave entry €72 cash paid separately</div>
+      </div>
+      <div class="cost-amount">~€500</div>
+      <div class="cost-status pending">Book now</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--terracotta);">
+      <div class="cost-icon">⛴️</div>
+      <div class="cost-info">
+        <div class="cost-name">Krilo: Split → Hvar · Jun 18 <span style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(196,96,42,.3);color:var(--terracotta);padding:2px 6px;border-radius:4px;margin-left:4px;">⚠️ Date error</span></div>
+        <div class="cost-detail">Receipt 6342-15-1 · 4 tickets (3GD905VU005/006/007/008) · Booked for <strong>18 May 2026</strong> — needs correcting to <strong>18 June 2026, 08:00</strong> · Customer support contacted · €100 paid</div>
+      </div>
+      <div class="cost-amount">€100</div>
+      <div class="cost-status" style="background:#fdf0eb;color:var(--terracotta);">⚠️ Fix date</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">🏛️</div>
+      <div class="cost-info">
+        <div class="cost-name">Dubrovnik City Walls — Jun 15</div>
+        <div class="cost-detail">4 tickets · 08:00 slot · visitdubrovnik.hr · book online to guarantee morning entry</div>
+      </div>
+      <div class="cost-amount">~€120</div>
+      <div class="cost-status pending">visitdubrovnik.hr</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">🇲🇪</div>
+      <div class="cost-info">
+        <div class="cost-name">Montenegro / Kotor private driver — Jun 22</div>
+        <div class="cost-detail">Full day from Sheraton · ~3 hours drive each way · via Sheraton concierge or local operator</div>
+      </div>
+      <div class="cost-amount">~€150</div>
+      <div class="cost-status pending">Via concierge</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">🚗</div>
+      <div class="cost-info">
+        <div class="cost-name">Car hire Split — Jun 17 (Krka day trip)</div>
+        <div class="cost-detail">1 day · Le Méridien desk or rentalcars.com · needed for Skradin + Trogir</div>
+      </div>
+      <div class="cost-amount">~€60</div>
+      <div class="cost-status pending">Book soon</div>
+    </div>
+    <div class="cost-item" style="border-left:4px solid var(--gold);">
+      <div class="cost-icon">🚖</div>
+      <div class="cost-info">
+        <div class="cost-name">Airport transfers (both ends)</div>
+        <div class="cost-detail">DBV airport → La Vita e Bella Jun 13 · Sheraton → DBV airport Jun 25 by 11:00 · ~€25–30 each way</div>
+      </div>
+      <div class="cost-amount">~€120</div>
+      <div class="cost-status pending">Book in advance</div>
+    </div>
+  </div>
+
+  <!-- ESTIMATED EXTRAS -->
+  <div style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--warm-sand);"></span>
+    Estimated daily spending — not booked
+  </div>
+  <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);margin-bottom:32px;">
+    <div class="cost-item">
+      <div class="cost-icon">🍽️</div>
+      <div class="cost-info"><div class="cost-name">Restaurants &amp; meals</div><div class="cost-detail">12 days · avg ~€150/day for 4 · mix of nice restaurants + casual lunches</div></div>
+      <div class="cost-amount">~€1,800</div>
+      <div class="cost-status" style="background:var(--sand);color:var(--text-light);">Estimate</div>
+    </div>
+    <div class="cost-item">
+      <div class="cost-icon">🍷</div>
+      <div class="cost-info"><div class="cost-name">Drinks, beach bars, ice creams</div><div class="cost-detail">Buža Bar, Hula Hula, Pakleni beach bars, Sheraton pool bar</div></div>
+      <div class="cost-amount">~€300</div>
+      <div class="cost-status" style="background:var(--sand);color:var(--text-light);">Estimate</div>
+    </div>
+    <div class="cost-item">
+      <div class="cost-icon">🚤</div>
+      <div class="cost-info"><div class="cost-name">Water taxis &amp; local boats</div><div class="cost-detail">Pakleni Islands water taxis ~€10pp each way · Šunj beach (Lopud) · local transfers</div></div>
+      <div class="cost-amount">~€150</div>
+      <div class="cost-status" style="background:var(--sand);color:var(--text-light);">Estimate</div>
+    </div>
+    <div class="cost-item">
+      <div class="cost-icon">🛍️</div>
+      <div class="cost-info"><div class="cost-name">Personal spending &amp; shopping</div><div class="cost-detail">Souvenirs, kids activities, paddleboards (~€15/hr), incidentals</div></div>
+      <div class="cost-amount">~€300</div>
+      <div class="cost-status" style="background:var(--sand);color:var(--text-light);">Estimate</div>
+    </div>
+  </div>
+
+  <!-- GRAND TOTAL -->
+  <div style="background:linear-gradient(135deg,var(--deep-sea),#1a6b8a);border-radius:16px;padding:28px 32px;">
+    <div style="display:grid;grid-template-columns:1fr auto auto auto;gap:24px;align-items:center;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px;">Grand total estimate · excl. flights</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:white;line-height:1;">~€14,000</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;">4 people · 12 nights · full trip experience</div>
+      </div>
+      <div style="text-align:center;padding:0 8px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Paid</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#80d4a8;">€1,827</div>
+      </div>
+      <div style="text-align:center;padding:0 8px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Confirmed</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#a8dff0;">€10,832</div>
+      </div>
+      <div style="text-align:center;padding:0 8px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px;">Still to book</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#fac775;">~€1,650</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-block" style="margin-top:20px;">
+    💡 <strong>Cash to bring:</strong> At least <strong>€200 cash</strong> — Blue Cave entry (€72), ferry tips, small island restaurants and water taxis. Croatia uses Euro (€) since 2023. ATMs available in all major towns but limited on smaller islands.
+  </div>
+</div>
+</section>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <p>Croatia Holiday · June 13–25, 2026 · <strong>Dubrovnik → Mljet → Split → Vis → Hvar → Brač → Krka</strong></p>
-  <p style="margin-top:8px;">Ferry bookings: <strong>jadrolinija.hr</strong> · National Parks: <strong>npkrka.hr</strong> & <strong>np-mljet.hr</strong> · Dubrovnik Walls: <strong>visitdubrovnik.hr</strong></p>
+  <p>Croatia Holiday · June 13–25, 2026</p>
+  <p><strong>Dubrovnik</strong> · <strong>Split</strong> · <strong>Hvar</strong> · <strong>Vis &amp; Blue Cave</strong> · <strong>Dubrovnik Riviera</strong> · <strong>Montenegro</strong></p>
+  <p style="margin-top:8px;">Ferries: <strong>krilo.hr</strong> · Krka tickets: <strong>npkrka.hr</strong> · City Walls: <strong>visitdubrovnik.hr</strong></p>
 </footer>
 
 <script>
-  function toggle(el) {
-    el.classList.toggle('checked');
-    // Persist to localStorage
-    const allItems = document.querySelectorAll('.todo-item');
-    const state = Array.from(allItems).map(i => i.classList.contains('checked'));
-    try { localStorage.setItem('croatia-todo', JSON.stringify(state)); } catch(e) {}
-  }
+function showTab(id, el) {
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  el.classList.add('active');
+  window.scrollTo({top: document.querySelector('.nav-tabs').offsetTop, behavior: 'smooth'});
+}
 
-  // Restore state
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  saveChecklist();
+}
+
+function saveChecklist() {
+  const items = document.querySelectorAll('.check-item');
+  const state = Array.from(items).map(i => i.classList.contains('checked'));
+  try { localStorage.setItem('croatia-checklist', JSON.stringify(state)); } catch(e) {}
+}
+
+function loadChecklist() {
   try {
-    const saved = JSON.parse(localStorage.getItem('croatia-todo') || '[]');
-    const allItems = document.querySelectorAll('.todo-item');
-    saved.forEach((checked, i) => {
-      if (checked && allItems[i]) allItems[i].classList.add('checked');
-    });
+    const saved = JSON.parse(localStorage.getItem('croatia-checklist') || '[]');
+    const items = document.querySelectorAll('.check-item');
+    saved.forEach((checked, i) => { if (checked && items[i]) items[i].classList.add('checked'); });
   } catch(e) {}
+}
+
+function togglePack(el) {
+  el.classList.toggle('checked');
+  updatePackProgress();
+  savePacking();
+}
+
+function updatePackProgress() {
+  const all = document.querySelectorAll('.pack-item');
+  const done = document.querySelectorAll('.pack-item.checked');
+  const pct = all.length ? Math.round(done.length / all.length * 100) : 0;
+  const fill = document.getElementById('pack-fill');
+  const count = document.getElementById('pack-count-total');
+  if (fill) fill.style.width = pct + '%';
+  if (count) count.textContent = done.length + ' / ' + all.length;
+}
+
+function savePacking() {
+  const items = document.querySelectorAll('.pack-item');
+  const state = Array.from(items).map(i => i.classList.contains('checked'));
+  try { localStorage.setItem('croatia-packing', JSON.stringify(state)); } catch(e) {}
+}
+
+function loadPacking() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('croatia-packing') || '[]');
+    const items = document.querySelectorAll('.pack-item');
+    saved.forEach((checked, i) => { if (checked && items[i]) items[i].classList.add('checked'); });
+  } catch(e) {}
+  updatePackProgress();
+}
+
+loadChecklist();
+loadPacking();
 </script>
 </body>
 </html>
